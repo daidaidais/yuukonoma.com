@@ -34,12 +34,16 @@ const Hero = () => {
                 alt="hero.png"
                 className="hero-image"
                 style={{ position: "absolute" }}
+                loading="eager"
+                placeholder="blurred"
               />
               <StaticImage
                 src="../images/hero-background.png"
                 alt="hero-background.png"
                 className="hero-image-background"
                 style={{ position: "absolute" }}
+                loading="eager"
+                placeholder="blurred"
               />
             </>
           )}

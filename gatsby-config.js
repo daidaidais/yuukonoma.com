@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: "乃万 由芙子 | Yuuko Noma",
     description:
-      "乃万由芙子（Yuuko Noma) のウェブサイト。自分の身体や心を正しく活かすことでより生き易く、より人と穏やかに繋がる為のヨーガや日常を伝えている。",
+      "ヨガ講師／瞑想家の乃万由芙子（Yuuko Noma) のウェブサイト。自分の身体や心を正しく活かすことでより生き易く、より人と穏やかに繋がる為のヨーガや日常を伝えている。",
     author: `Daisuke Yukita`,
-    image: `/images/ogp.jpg`,
-    siteUrl: `https://yuukonoma.com`,
+    image: `/images/ogp.png`,
+    siteUrl: `https://optimistic-kowalevski-680001.netlify.app`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
