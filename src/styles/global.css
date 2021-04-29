@@ -590,10 +590,11 @@ Footer
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: animate404 6s linear infinite;
 }
 
 .title-404 {
-  font-size: 10rem;
+  font-size: 12rem;
   -webkit-text-fill-color: #ffaa7b; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #000852;
@@ -606,7 +607,19 @@ Footer
 
 .image-404 {
   width: 10rem;
-  fill: #fff4cb;
+  fill: #000852;
+}
+
+@keyframes animate404 {
+  0% {
+    background-color: #ffaa7b;
+  }
+  50% {
+    background: #fff4cb;
+  }
+  100% {
+    background: #ffaa7b;
+  }
 }
 
 /**************
@@ -797,6 +810,22 @@ Responsive
     font-size: 0.6rem;
     transform: translate(-50%, -50%);
   }
+  .title-404 {
+    font-size: 6rem;
+  }
+
+  .subtitle-404 {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  .image-404 {
+    height: 8rem;
+    fill: #000852;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 896px) {
   /*　for iPad portrait and Smartphone landscape 　*/
@@ -860,5 +889,21 @@ Responsive
     height: 4rem;
     margin: 2rem 2rem 0;
     animation: animateIcons 2s ease infinite;
+  }
+  .title-404 {
+    font-size: 6rem;
+  }
+
+  .subtitle-404 {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  .image-404 {
+    height: 8rem;
+    fill: #000852;
   }
 }

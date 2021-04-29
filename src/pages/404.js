@@ -8,7 +8,7 @@ import Layout from "../components/Layout";
 // markup
 const NotFoundPage = () => {
   return (
-    <Layout>
+    <Layout popIn>
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap&subset=japanese"
