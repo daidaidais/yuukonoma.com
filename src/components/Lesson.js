@@ -68,7 +68,7 @@ const Lesson = (props) => {
         </Col>
         <Col sm={4} md={{ span: 8, offset: 2 }} xl={{ span: 4, offset: 0 }}>
           <SlickSlider image={props.image} className="class-image-wrapper" />
-          {props.link !== " " && (
+          {props.link !== " " && props.link !== null && (
             <div className="btn-book-wrapper">
               <a
                 href={props.link}

@@ -55,6 +55,21 @@ const Profile = () => {
     }
   }, []);
 
+  const [favouritesHeight, setFavouritesHeight] = useState([]);
+  const handleFavouritesHeight = (index, height) => {
+    favouritesHeight[index] = height;
+  };
+
+  const [showFavourites, setShowFavourites] = useState([]);
+  let heightFromTop = 0;
+  for (let i = 0; i < favouritesHeight.length; i++) {
+    heightFromTop += favouritesHeight[i];
+    if (windowBottom + 500 > heightFromTop) showFavourites[i] = true;
+    else showFavourites[i] = false;
+  }
+
+  console.log(showFavourites);
+
   if (docHeight - windowBottom < 100 && popIn === false) setPopIn(true);
   else if (docHeight - windowBottom >= 100 && popIn === true) setPopIn(false);
 
@@ -78,6 +93,8 @@ const Profile = () => {
             index={index}
             key={index}
             windowBottom={windowBottom}
+            setHeight={handleFavouritesHeight}
+            showFavourites={showFavourites}
           />
         )
       )}

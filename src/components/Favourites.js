@@ -5,6 +5,22 @@ import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Favourites = (props) => {
+  const wrapperRef = useRef();
+  useEffect(() => {
+    if (wrapperRef.current) {
+      props.setHeight(
+        props.index,
+        wrapperRef.current.getBoundingClientRect().height
+      );
+    }
+    window.addEventListener("resize", () => {
+      props.setHeight(
+        props.index,
+        wrapperRef.current.getBoundingClientRect().height
+      );
+    });
+  }, []);
+
   const Text = ({ children }) => children;
   const InlineLink = ({ link, children }) => (
     <a href={link} className="class-link" target="_blank" rel="noreferrer">
@@ -30,10 +46,16 @@ const Favourites = (props) => {
   }
 
   return (
-    <Row className={wrapperClass}>
+    <Row className={wrapperClass} ref={wrapperRef}>
       <Col sm={{ span: 5, offset: 1 }}>
         {!flipped ? (
-          <div className="favourites-text-wrapper">
+          <div
+            className={
+              props.showFavourites[props.index] || props.index === 0
+                ? "favourites-text-wrapper"
+                : "favourites-text-wrapper fade"
+            }
+          >
             <p className="favourites-title">{props.title}</p>
             <p className="favourites-text">
               {renderRichText(props.explanation, options)}
@@ -47,7 +69,13 @@ const Favourites = (props) => {
             )}
           </div>
         ) : (
-          <div className="favourites-image-wrapper">
+          <div
+            className={
+              props.showFavourites[props.index] || props.index === 0
+                ? "favourites-image-wrapper"
+                : "favourites-image-wrapper fade"
+            }
+          >
             <GatsbyImage
               image={props.image.gatsbyImageData}
               alt={props.image.file.fileName}
@@ -58,7 +86,13 @@ const Favourites = (props) => {
       </Col>
       <Col sm={5}>
         {!flipped ? (
-          <div className="favourites-image-wrapper">
+          <div
+            className={
+              props.showFavourites[props.index] || props.index === 0
+                ? "favourites-image-wrapper"
+                : "favourites-image-wrapper fade"
+            }
+          >
             <GatsbyImage
               image={props.image.gatsbyImageData}
               alt={props.image.file.fileName}
@@ -66,7 +100,13 @@ const Favourites = (props) => {
             />
           </div>
         ) : (
-          <div className="favourites-text-wrapper">
+          <div
+            className={
+              props.showFavourites[props.index] || props.index === 0
+                ? "favourites-text-wrapper"
+                : "favourites-text-wrapper fade"
+            }
+          >
             <p className="favourites-title">{props.title}</p>
             <p className="favourites-text">
               {renderRichText(props.explanation, options)}
