@@ -23,7 +23,9 @@ const Schedule = (props, { children }) => {
             image {
               file {
                 fileName
-                url
+              }
+              fluid {
+                src
               }
               gatsbyImageData
             }

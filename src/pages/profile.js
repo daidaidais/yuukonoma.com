@@ -32,7 +32,9 @@ const Profile = () => {
               gatsbyImageData
               file {
                 fileName
-                url
+              }
+              fluid {
+                src
               }
             }
             link

@@ -80,7 +80,10 @@ const Favourites = (props) => {
             }
           >
             {isIE ? (
-              <img src={props.image.file.url} alt={props.image.file.fileName} />
+              <img
+                src={props.image.fluid.src}
+                alt={props.image.file.fileName}
+              />
             ) : (
               <GatsbyImage
                 image={props.image.gatsbyImageData}
@@ -101,7 +104,10 @@ const Favourites = (props) => {
             }
           >
             {isIE ? (
-              <img src={props.image.file.url} alt={props.image.file.fileName} />
+              <img
+                src={props.image.fluid.src}
+                alt={props.image.file.fileName}
+              />
             ) : (
               <GatsbyImage
                 image={props.image.gatsbyImageData}

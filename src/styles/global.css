@@ -482,7 +482,7 @@ Say Hi
 .say-hi-icons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
   padding: 1rem;
 }
@@ -514,6 +514,7 @@ Footer
   position: relative;
   height: 150px;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 .footer-copyright {
   margin: 0;
@@ -787,6 +788,9 @@ Responsive
   .say-hi-text {
     font-size: 1rem;
   }
+  .say-hi-icons {
+    justify-content: center;
+  }
   .say-hi-icon {
     height: 4rem;
     margin: 1rem 6rem;
@@ -883,7 +887,8 @@ Responsive
     border-radius: 12px;
   }
   .say-hi-icons {
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
   .say-hi-icon {
     height: 4rem;
