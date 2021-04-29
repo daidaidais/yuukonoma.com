@@ -92,6 +92,7 @@ const Favourites = (props) => {
                 image={props.image.gatsbyImageData}
                 alt={props.image.file.fileName}
                 className="favourites-image"
+                placeholder="blurred"
               />
             )}
           </div>
@@ -117,6 +118,7 @@ const Favourites = (props) => {
                 image={props.image.gatsbyImageData}
                 alt={props.image.file.fileName}
                 className="favourites-image"
+                placeholder="blurred"
               />
             )}
           </div>
