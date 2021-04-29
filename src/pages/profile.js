@@ -68,8 +68,6 @@ const Profile = () => {
     else showFavourites[i] = false;
   }
 
-  console.log(showFavourites);
-
   if (docHeight - windowBottom < 100 && popIn === false) setPopIn(true);
   else if (docHeight - windowBottom >= 100 && popIn === true) setPopIn(false);
 

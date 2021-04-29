@@ -17,11 +17,13 @@ const Hero = () => {
             src="../images/hero.png"
             alt="hero.png"
             className="hero-image"
+            style={{ position: "absolute" }}
           />
           <StaticImage
             src="../images/hero-background.png"
             alt="hero-background.png"
             className="hero-image-background"
+            style={{ position: "absolute" }}
           />
         </div>
       </Col>
