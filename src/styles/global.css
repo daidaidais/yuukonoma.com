@@ -333,10 +333,14 @@ SLICK SLIDER
   background-color: #c4c4c4;
   font-size: 0;
 }
+
+.slick-dots li button:before {
+  display: none;
+}
+
 .slick-dots li.slick-active button {
   background-color: #ffaa7b;
 }
-
 .slick-slider {
   max-width: 720px;
 }
