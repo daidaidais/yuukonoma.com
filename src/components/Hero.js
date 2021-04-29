@@ -12,7 +12,7 @@ const Hero = () => {
     setAnimationFinished(true);
   };
 
-  const isIE = React.useContext(IEContext);
+  const isIE = useContext(IEContext);
 
   return (
     <Row className="section-hero">

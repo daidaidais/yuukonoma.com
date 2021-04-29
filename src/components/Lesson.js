@@ -3,22 +3,8 @@ import SlickSlider from "../components/Slider";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { Row, Col } from "react-bootstrap";
-import { useStaticQuery, graphql } from "gatsby";
 
 const Lesson = (props) => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-          siteUrl
-        }
-      }
-    }
-  `);
-
   const Text = ({ children }) => children;
   const InlineLink = ({ link, children }) => (
     <a href={link} className="class-link" target="_blank" rel="noreferrer">

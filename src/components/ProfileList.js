@@ -25,7 +25,7 @@ const ProfileList = (props) => {
       text.split("\n").flatMap((text, i) => [i > 0 && <br />, text]),
   };
 
-  const isIE = React.useContext(IEContext);
+  const isIE = useContext(IEContext);
 
   return (
     <>

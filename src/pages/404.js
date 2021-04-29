@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 import { Helmet } from "react-helmet";
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";

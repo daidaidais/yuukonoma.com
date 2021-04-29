@@ -14,7 +14,7 @@ const SlickSlider = (props) => {
     dotClass: "my-slick-dots",
   };
 
-  const isIE = React.useContext(IEContext);
+  const isIE = useContext(IEContext);
 
   return (
     <Slider {...settings}>

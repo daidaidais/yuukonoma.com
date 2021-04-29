@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
-import { Link } from "gatsby";
 import SEO from "../components/Seo";
 import { Helmet } from "react-helmet";
 import Favourites from "../components/Favourites";

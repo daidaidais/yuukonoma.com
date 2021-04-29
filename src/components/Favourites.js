@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import { Row, Col } from "react-bootstrap";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
@@ -22,9 +22,9 @@ const Favourites = (props) => {
         );
       }
     });
-  }, []);
+  }, [props]);
 
-  const isIE = React.useContext(IEContext);
+  const isIE = useContext(IEContext);
 
   const Text = ({ children }) => children;
   const InlineLink = ({ link, children }) => (
