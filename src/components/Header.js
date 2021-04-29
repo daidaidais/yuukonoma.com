@@ -4,7 +4,7 @@ import { Navbar, Nav } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar expand="md" fixed="top" className="mt-3 mb-3">
+    <Navbar expand="sm" fixed="top" className="mt-3 mb-3">
       <Navbar.Toggle aria-controls="navbarResponsive" />
       <Navbar.Collapse id="navbarResponsive">
         <Nav as="ul" className="ml-auto">
