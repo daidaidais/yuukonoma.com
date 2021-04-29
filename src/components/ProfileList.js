@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Row, Col } from "react-bootstrap";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import { IEContext } from "./Layout";
+import Tinted from "../images/Tinted_Photography256.jpg";
 
 const ProfileList = (props) => {
   const Text = ({ children }) => children;
@@ -23,6 +25,8 @@ const ProfileList = (props) => {
       text.split("\n").flatMap((text, i) => [i > 0 && <br />, text]),
   };
 
+  const isIE = React.useContext(IEContext);
+
   return (
     <>
       <Row className="section-profile">
@@ -31,11 +35,19 @@ const ProfileList = (props) => {
           md={{ span: 10, offset: 1 }}
           xl={{ span: 5, offset: 1 }}
         >
-          <StaticImage
-            src="../images/Tinted_Photography256.jpg"
-            alt="Tinted_Photography256.jpg"
-            className="profile-image"
-          />
+          {isIE ? (
+            <img
+              src={Tinted}
+              alt="Tinted_Photography256.jpg"
+              className="profile-image"
+            />
+          ) : (
+            <StaticImage
+              src="../images/Tinted_Photography256.jpg"
+              alt="Tinted_Photography256.jpg"
+              className="profile-image"
+            />
+          )}
         </Col>
         <Col sm={5} md={{ span: 8, offset: 4 }} xl={{ span: 5, offset: 0 }}>
           <p className="profile-title">PROFILE</p>

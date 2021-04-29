@@ -23,6 +23,7 @@ const Schedule = (props, { children }) => {
             image {
               file {
                 fileName
+                url
               }
               gatsbyImageData
             }

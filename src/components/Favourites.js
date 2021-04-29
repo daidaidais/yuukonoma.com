@@ -1,8 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import { Row, Col } from "react-bootstrap";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { IEContext } from "./Layout";
 
 const Favourites = (props) => {
   const wrapperRef = useRef();
@@ -20,6 +21,8 @@ const Favourites = (props) => {
       );
     });
   }, []);
+
+  const isIE = React.useContext(IEContext);
 
   const Text = ({ children }) => children;
   const InlineLink = ({ link, children }) => (
@@ -76,11 +79,15 @@ const Favourites = (props) => {
                 : "favourites-image-wrapper fade"
             }
           >
-            <GatsbyImage
-              image={props.image.gatsbyImageData}
-              alt={props.image.file.fileName}
-              className="favourites-image"
-            />
+            {isIE ? (
+              <img src={props.image.file.url} alt={props.image.file.fileName} />
+            ) : (
+              <GatsbyImage
+                image={props.image.gatsbyImageData}
+                alt={props.image.file.fileName}
+                className="favourites-image"
+              />
+            )}
           </div>
         )}
       </Col>
@@ -93,11 +100,15 @@ const Favourites = (props) => {
                 : "favourites-image-wrapper fade"
             }
           >
-            <GatsbyImage
-              image={props.image.gatsbyImageData}
-              alt={props.image.file.fileName}
-              className="favourites-image"
-            />
+            {isIE ? (
+              <img src={props.image.file.url} alt={props.image.file.fileName} />
+            ) : (
+              <GatsbyImage
+                image={props.image.gatsbyImageData}
+                alt={props.image.file.fileName}
+                className="favourites-image"
+              />
+            )}
           </div>
         ) : (
           <div

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Slider from "react-slick";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { IEContext } from "./Layout";
 
 const SlickSlider = (props) => {
   const settings = {
@@ -13,11 +14,20 @@ const SlickSlider = (props) => {
     dotClass: "my-slick-dots",
   };
 
+  const isIE = React.useContext(IEContext);
+
   return (
     <Slider {...settings}>
       {props.image.map((item, index) => (
         <div key={index}>
-          <GatsbyImage image={item.gatsbyImageData} alt={item.file.fileName} />
+          {isIE ? (
+            <img src={item.file.url} alt={item.file.fileName} />
+          ) : (
+            <GatsbyImage
+              image={item.gatsbyImageData}
+              alt={item.file.fileName}
+            />
+          )}
         </div>
       ))}
     </Slider>

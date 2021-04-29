@@ -32,6 +32,7 @@ const Profile = () => {
               gatsbyImageData
               file {
                 fileName
+                url
               }
             }
             link

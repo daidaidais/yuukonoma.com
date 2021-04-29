@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Row, Col } from "react-bootstrap";
+import { IEContext } from "./Layout";
+import HeroImage from "../images/hero.png";
+import HeroBgImage from "../images/hero-background.png";
 
 const Hero = () => {
   const [animationFinished, setAnimationFinished] = useState(false);
@@ -9,22 +12,37 @@ const Hero = () => {
     setAnimationFinished(true);
   };
 
+  const isIE = React.useContext(IEContext);
+
   return (
     <Row className="section-hero">
       <Col sm={{ span: 5, offset: 1 }}>
         <div className="hero-image-wrapper">
-          <StaticImage
-            src="../images/hero.png"
-            alt="hero.png"
-            className="hero-image"
-            style={{ position: "absolute" }}
-          />
-          <StaticImage
-            src="../images/hero-background.png"
-            alt="hero-background.png"
-            className="hero-image-background"
-            style={{ position: "absolute" }}
-          />
+          {isIE ? (
+            <>
+              <img src={HeroImage} alt="hero.png" className="hero-image" />
+              <img
+                src={HeroBgImage}
+                alt="hero.png"
+                className="hero-image-background"
+              />
+            </>
+          ) : (
+            <>
+              <StaticImage
+                src="../images/hero.png"
+                alt="hero.png"
+                className="hero-image"
+                style={{ position: "absolute" }}
+              />
+              <StaticImage
+                src="../images/hero-background.png"
+                alt="hero-background.png"
+                className="hero-image-background"
+                style={{ position: "absolute" }}
+              />
+            </>
+          )}
         </div>
       </Col>
       <Col sm={6}>
