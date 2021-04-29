@@ -21,7 +21,7 @@ const SlickSlider = (props) => {
       {props.image.map((item, index) => (
         <div key={index}>
           {isIE ? (
-            <img src={item.fluid.src} alt={item.file.fileName} />
+            <img src={item.fluid.src} height="300" alt={item.file.fileName} />
           ) : (
             <GatsbyImage
               image={item.gatsbyImageData}

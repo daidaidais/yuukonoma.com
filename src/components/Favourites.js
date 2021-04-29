@@ -15,10 +15,12 @@ const Favourites = (props) => {
       );
     }
     window.addEventListener("resize", () => {
-      props.setHeight(
-        props.index,
-        wrapperRef.current.getBoundingClientRect().height
-      );
+      if (wrapperRef.current) {
+        props.setHeight(
+          props.index,
+          wrapperRef.current.getBoundingClientRect().height
+        );
+      }
     });
   }, []);
 
@@ -82,6 +84,7 @@ const Favourites = (props) => {
             {isIE ? (
               <img
                 src={props.image.fluid.src}
+                height="200"
                 alt={props.image.file.fileName}
               />
             ) : (
@@ -106,6 +109,7 @@ const Favourites = (props) => {
             {isIE ? (
               <img
                 src={props.image.fluid.src}
+                height="200"
                 alt={props.image.file.fileName}
               />
             ) : (
