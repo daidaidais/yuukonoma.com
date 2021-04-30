@@ -36,7 +36,7 @@ const Schedule = (props, { children }) => {
   `);
 
   return (
-    <Row className="section-schedule">
+    <Row id="section-schedule" className="section-schedule">
       <Col
         sm={{ span: 8, offset: 1 }}
         md={{ span: 8, offset: 1 }}
