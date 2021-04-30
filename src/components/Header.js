@@ -1,21 +1,27 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Navbar, Nav } from "react-bootstrap";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Header = () => {
+  const coverGradient =
+    "linear-gradient(30deg, rgba(255,170,123,1) 0%, rgba(255,244,203,1) 100%)";
+
   return (
     <Navbar expand="sm" fixed="top" className="mt-3 mb-3">
       <Navbar.Toggle aria-controls="navbarResponsive" />
       <Navbar.Collapse id="navbarResponsive">
         <Nav as="ul" className="ml-auto">
           <Nav.Item as="li">
-            <Link
+            <AniLink
+              cover
+              direction="right"
+              bg={coverGradient}
               to="/"
               className="my-nav-link"
               activeClassName="nav-link-active"
             >
               LESSONS
-            </Link>
+            </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
             <a
@@ -28,13 +34,16 @@ const Header = () => {
             </a>
           </Nav.Item>
           <Nav.Item as="li">
-            <Link
+            <AniLink
+              cover
+              direction="right"
+              bg={coverGradient}
               to="/profile"
               className="my-nav-link"
               activeClassName="nav-link-active"
             >
               PROFILE
-            </Link>
+            </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
             <a

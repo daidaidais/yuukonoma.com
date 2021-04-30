@@ -4,6 +4,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { IEContext } from "./Layout";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Favourites = (props) => {
   const wrapperRef = useRef();
@@ -50,100 +51,68 @@ const Favourites = (props) => {
     wrapperClass += " orange";
   }
 
+  const favouritesText = (
+    <div
+      className={
+        props.showFavourites[props.index] || props.index === 0
+          ? "favourites-text-wrapper"
+          : "favourites-text-wrapper fade"
+      }
+    >
+      <p className="favourites-title">{props.title}</p>
+      <p className="favourites-text">
+        {renderRichText(props.explanation, options)}
+      </p>
+      {props.buttonText && (
+        <div className="btn-favourite-wrapper">
+          {props.link ===
+          "https://yuukonoma.com/index.html#section-schedule" ? (
+            <AnchorLink
+              to="/#section-schedule"
+              title={props.buttonText}
+              className="btn-favourite"
+            />
+          ) : (
+            <a href={props.link} className="btn-favourite">
+              {props.buttonText}
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+
+  const favouritesImage = (
+    <div
+      className={
+        props.showFavourites[props.index] || props.index === 0
+          ? "favourites-image-wrapper"
+          : "favourites-image-wrapper fade"
+      }
+    >
+      {isIE ? (
+        <img
+          src={props.image.fluid.src}
+          height="200"
+          alt={props.image.file.fileName}
+        />
+      ) : (
+        <GatsbyImage
+          image={props.image.gatsbyImageData}
+          alt={props.image.file.fileName}
+          className="favourites-image"
+          placeholder="blurred"
+        />
+      )}
+    </div>
+  );
+
   return (
     <Row className={wrapperClass} ref={wrapperRef}>
       <Col sm={{ span: 5, offset: 1 }}>
-        {!flipped ? (
-          <div
-            className={
-              props.showFavourites[props.index] || props.index === 0
-                ? "favourites-text-wrapper"
-                : "favourites-text-wrapper fade"
-            }
-          >
-            <p className="favourites-title">{props.title}</p>
-            <p className="favourites-text">
-              {renderRichText(props.explanation, options)}
-            </p>
-            {props.buttonText && (
-              <div className="btn-favourite-wrapper">
-                <a href={props.link} className="btn-favourite">
-                  {props.buttonText}
-                </a>
-              </div>
-            )}
-          </div>
-        ) : (
-          <div
-            className={
-              props.showFavourites[props.index] || props.index === 0
-                ? "favourites-image-wrapper"
-                : "favourites-image-wrapper fade"
-            }
-          >
-            {isIE ? (
-              <img
-                src={props.image.fluid.src}
-                height="200"
-                alt={props.image.file.fileName}
-              />
-            ) : (
-              <GatsbyImage
-                image={props.image.gatsbyImageData}
-                alt={props.image.file.fileName}
-                className="favourites-image"
-                placeholder="blurred"
-              />
-            )}
-          </div>
-        )}
+        {!flipped ? favouritesText : favouritesImage}
       </Col>
-      <Col sm={5}>
-        {!flipped ? (
-          <div
-            className={
-              props.showFavourites[props.index] || props.index === 0
-                ? "favourites-image-wrapper"
-                : "favourites-image-wrapper fade"
-            }
-          >
-            {isIE ? (
-              <img
-                src={props.image.fluid.src}
-                height="200"
-                alt={props.image.file.fileName}
-              />
-            ) : (
-              <GatsbyImage
-                image={props.image.gatsbyImageData}
-                alt={props.image.file.fileName}
-                className="favourites-image"
-                placeholder="blurred"
-              />
-            )}
-          </div>
-        ) : (
-          <div
-            className={
-              props.showFavourites[props.index] || props.index === 0
-                ? "favourites-text-wrapper"
-                : "favourites-text-wrapper fade"
-            }
-          >
-            <p className="favourites-title">{props.title}</p>
-            <p className="favourites-text">
-              {renderRichText(props.explanation, options)}
-            </p>
-            {props.buttonText && (
-              <div className="btn-favourite-wrapper">
-                <a href={props.link} className="btn-favourite">
-                  {props.buttonText}
-                </a>
-              </div>
-            )}
-          </div>
-        )}
-      </Col>
+      <Col sm={5}>{!flipped ? favouritesImage : favouritesText}</Col>
     </Row>
   );
 };
