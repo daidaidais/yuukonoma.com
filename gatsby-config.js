@@ -17,6 +17,7 @@ module.exports = {
     "react-bootstrap",
     "react-dom",
     "react-helmet",
+    "gatsby-plugin-transition-link",
     {
       resolve: "gatsby-source-contentful",
       options: {

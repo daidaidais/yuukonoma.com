@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Navbar, Nav } from "react-bootstrap";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Header = () => {
   return (
@@ -9,13 +9,16 @@ const Header = () => {
       <Navbar.Collapse id="navbarResponsive">
         <Nav as="ul" className="ml-auto">
           <Nav.Item as="li">
-            <Link
+            <AniLink
+              cover
+              direction="right"
+              bg="linear-gradient(0deg, rgba(255,170,123,1) 10%, rgba(255,244,203,1) 100%)"
               to="/"
               className="my-nav-link"
               activeClassName="nav-link-active"
             >
               LESSONS
-            </Link>
+            </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
             <a
@@ -28,13 +31,16 @@ const Header = () => {
             </a>
           </Nav.Item>
           <Nav.Item as="li">
-            <Link
+            <AniLink
+              cover
+              direction="right"
+              bg="#ffaa7b"
               to="/profile"
               className="my-nav-link"
               activeClassName="nav-link-active"
             >
               PROFILE
-            </Link>
+            </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
             <a
