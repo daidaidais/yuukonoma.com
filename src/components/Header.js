@@ -3,6 +3,9 @@ import { Navbar, Nav } from "react-bootstrap";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Header = () => {
+  const coverGradient =
+    "linear-gradient(30deg, rgba(255,170,123,1) 0%, rgba(255,244,203,1) 100%)";
+
   return (
     <Navbar expand="sm" fixed="top" className="mt-3 mb-3">
       <Navbar.Toggle aria-controls="navbarResponsive" />
@@ -12,7 +15,7 @@ const Header = () => {
             <AniLink
               cover
               direction="right"
-              bg="linear-gradient(0deg, rgba(255,170,123,1) 10%, rgba(255,244,203,1) 100%)"
+              bg={coverGradient}
               to="/"
               className="my-nav-link"
               activeClassName="nav-link-active"
@@ -34,7 +37,7 @@ const Header = () => {
             <AniLink
               cover
               direction="right"
-              bg="#ffaa7b"
+              bg={coverGradient}
               to="/profile"
               className="my-nav-link"
               activeClassName="nav-link-active"
