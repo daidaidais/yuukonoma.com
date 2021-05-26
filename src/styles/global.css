@@ -630,7 +630,7 @@ Footer
 /**************
 Responsive
 **************/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   /*　Smartphone portrait */
   html,
   body {
@@ -835,7 +835,7 @@ Responsive
     fill: #000852;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 896px) {
+@media screen and (min-width: 576px) and (max-width: 896px) {
   /*　for iPad portrait and Smartphone landscape 　*/
   .hero-image-wrapper {
     width: 100%;
