@@ -236,7 +236,8 @@ Schedule
 
 .class-time {
   font-size: 1.2rem;
-  line-height: 80%;
+  line-height: 120%;
+  margin-bottom: 0.6rem;
 }
 
 .class-notes {
