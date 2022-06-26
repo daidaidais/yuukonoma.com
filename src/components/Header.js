@@ -7,7 +7,7 @@ const Header = () => {
     "linear-gradient(30deg, rgba(255,170,123,1) 0%, rgba(255,244,203,1) 100%)";
 
   return (
-    <Navbar expand="sm" fixed="top" className="mt-3 mb-3">
+    <Navbar expand="lg" fixed="top" className="mt-3 mb-3">
       <Navbar.Toggle aria-controls="navbarResponsive" />
       <Navbar.Collapse id="navbarResponsive">
         <Nav as="ul" className="ml-auto">
@@ -21,6 +21,18 @@ const Header = () => {
               activeClassName="nav-link-active"
             >
               LESSONS
+            </AniLink>
+          </Nav.Item>
+          <Nav.Item as="li">
+            <AniLink
+              cover
+              direction="right"
+              bg={coverGradient}
+              to="/subscription"
+              className="my-nav-link"
+              activeClassName="nav-link-active"
+            >
+              SUBSCRIPTION
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">

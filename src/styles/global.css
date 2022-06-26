@@ -347,6 +347,239 @@ SLICK SLIDER
 }
 
 /**************
+Subscription
+**************/
+
+.section-subscriptionAbout {
+  background-color: #fff4cb;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.subscription-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 4rem;
+}
+
+.subscription-explanation {
+  width: 60%;
+  margin-top: 4rem;
+  line-height: 28px;
+}
+
+.btn-subscription {
+  display: inline-block;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  background-color: #000852;
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.btn-subscription:hover {
+  color: #ffffff;
+  background-color: #ffaa7b;
+  text-decoration: none;
+}
+.btn-subscription:active {
+  color: #ffffff;
+  background-color: #ffaa7b;
+  text-decoration: none;
+}
+
+.subscription-icon-wrapper {
+  position: relative;
+}
+
+.subscription-icon {
+  padding: 2rem 1rem;
+  font-size: 5rem;
+  writing-mode: vertical-rl;
+  border: 3px solid #001652;
+  border-radius: 10px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #000852;
+  -webkit-text-fill-color: #fff4cb;
+  transform: rotate(3deg);
+  font-weight: 700;
+  line-height: 115%;
+  position: absolute;
+  bottom: 0px;
+  animation: animateSubscription 2s ease infinite;
+}
+
+@keyframes animateSubscription {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+.section-subscriptionContents {
+  padding: 6rem 0;
+}
+
+.subscriptionContents-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.subscriptionContents-title {
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.subscriptionContents-title-line {
+  width: 100%;
+  height: 2px;
+  background-color: #000852;
+  border-radius: 10px;
+}
+
+.subscriptionContents-explanation {
+  font-size: 1.2rem;
+  width: 50%;
+}
+
+.subscriptionContent-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.subscriptionContent-border {
+  position: relative;
+  width: 90%;
+  border: 6px dashed #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscriptionContent-index {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscriptionContent-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.subscriptionContent-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.subscriptionContent-explanation {
+  margin-bottom: 2rem;
+}
+
+.subscriptionContent-image {
+  border-radius: 10px;
+  margin-top: auto;
+}
+
+.subscriptionContents-fee-wrapper {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.subscriptionContents-fee-pretext {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.subscriptionContents-fee-small {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subscriptionContents-fee-large {
+  font-size: 6rem;
+  font-weight: bold;
+  margin: auto 1rem;
+}
+
+.section-subscriptionWarning {
+  background-color: #fff4cb;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.subscriptionWarning-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscription-warning-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.subscription-warning-list {
+  text-align: left;
+  margin-bottom: 200px;
+}
+
+.subscription-warning-content {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.subscription-CTA {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 3rem 4rem;
+  background-color: #000852;
+  color: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.subscription-CTA:hover {
+  color: #ffffff;
+  background-color: #ffaa7b;
+  text-decoration: none;
+}
+.subscription-CTA:active {
+  color: #ffffff;
+  background-color: #ffaa7b;
+  text-decoration: none;
+}
+
+/**************
 Favourites
 **************/
 .section-favourites {
@@ -402,6 +635,7 @@ Favourites
   background-color: #000852;
   color: #ffffff;
   border-radius: 20px;
+  font-weight: bold;
 }
 
 .btn-favourite:hover {
@@ -631,8 +865,9 @@ Footer
 /**************
 Responsive
 **************/
+
 @media screen and (max-width: 576px) {
-  /*　Smartphone portrait */
+  /*　Bootstrap xs */
   html,
   body {
     max-width: 100%;
@@ -743,6 +978,85 @@ Responsive
     width: 60%;
     background-color: #000852;
   }
+  .section-subscriptionAbout {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .subscription-title {
+    font-size: 4rem;
+  }
+  .subscription-explanation {
+    width: 100%;
+  }
+  .btn-subscription {
+    margin: 2rem auto;
+  }
+  .subscription-icon-wrapper {
+    display: none;
+  }
+
+  .section-subscriptionContents {
+    padding: 3rem 0;
+  }
+
+  .subscriptionContents-title-wrapper {
+    flex-direction: column;
+    margin-bottom: 3em;
+  }
+
+  .subscriptionContents-title {
+    font-size: 1.5rem;
+    margin: 15px auto;
+  }
+
+  .subscriptionContents-explanation {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .subscriptionContent-border {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .subscriptionContent-subtitle {
+    font-size: 1rem;
+  }
+
+  .subscriptionContent-explanation {
+    font-size: 1rem;
+  }
+
+  .subscriptionContent-image {
+    border-radius: 10px;
+    margin-top: auto;
+  }
+
+  .subscriptionContents-fee-wrapper {
+    margin-top: 2rem;
+  }
+
+  .subscriptionContents-fee-small {
+    font-size: 1.5rem;
+  }
+
+  .subscriptionContents-fee-large {
+    font-size: 4rem;
+  }
+
+  .section-subscriptionWarning {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .subscription-warning-list {
+    margin-bottom: 100px;
+  }
+
+  .subscription-CTA {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+  }
 
   .section-favourites {
     padding: 1rem;
@@ -836,8 +1150,54 @@ Responsive
     fill: #000852;
   }
 }
-@media screen and (min-width: 576px) and (max-width: 896px) {
-  /*　for iPad portrait and Smartphone landscape 　*/
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  /*　Bootstrap sm 　*/
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("../images/hamburger.svg") !important;
+  }
+
+  .navbar-toggler-icon svg rect {
+    transition: transform 0.4s;
+  }
+  .toggleMenu1 {
+    transform: translate(5px, -1px) rotate(45deg);
+    transform-origin: 0 0;
+  }
+  .toggleMenu2 {
+    transform: translate(-8px, 7px) rotate(-45deg);
+    transform-origin: 0 0;
+  }
+  .navbar-collapse {
+    box-sizing: border-box;
+    padding: 15% 0;
+    text-align: center;
+    width: 100vh;
+    height: 90vh;
+    background-color: #ffffff;
+  }
+
+  .nav-item {
+    margin: 5% auto;
+  }
+  .my-nav-link {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000852;
+    margin: auto;
+  }
+  .my-nav-link svg {
+    width: 4rem;
+    height: 4rem;
+    fill: #000852;
+  }
+  .nav-link-active {
+    border-bottom: 3px solid #000852;
+    padding-bottom: 2px;
+  }
   .hero-image-wrapper {
     width: 100%;
     height: 100%;
@@ -862,6 +1222,105 @@ Responsive
     width: 80%;
     background-color: #000852;
   }
+
+  .section-subscriptionAbout {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .subscription-title {
+    font-size: 3rem;
+  }
+  .subscription-explanation {
+    width: 80%;
+  }
+  .btn-subscription {
+    margin: 2rem auto;
+  }
+  .subscription-icon {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    border: 2px solid #001652;
+    -webkit-text-stroke-width: 2px;
+    height: 240px;
+    right: 20px;
+    text-align: center;
+  }
+
+  @keyframes animateSubscription {
+    0% {
+      bottom: -90px;
+    }
+    50% {
+      bottom: -100px;
+    }
+    100% {
+      bottom: -90px;
+    }
+  }
+
+  .section-subscriptionContents {
+    padding: 3rem 0;
+  }
+
+  .subscriptionContents-title-wrapper {
+    flex-direction: column;
+    margin-bottom: 3em;
+  }
+
+  .subscriptionContents-title {
+    font-size: 1.5rem;
+    margin: 15px auto;
+  }
+
+  .subscriptionContents-explanation {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .subscriptionContent-border {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .subscriptionContent-subtitle {
+    font-size: 1rem;
+  }
+
+  .subscriptionContent-explanation {
+    font-size: 1rem;
+  }
+
+  .subscriptionContent-image {
+    border-radius: 10px;
+    margin-top: auto;
+  }
+
+  .subscriptionContents-fee-wrapper {
+    margin-top: 2rem;
+  }
+
+  .subscriptionContents-fee-small {
+    font-size: 1.5rem;
+  }
+
+  .subscriptionContents-fee-large {
+    font-size: 4rem;
+  }
+
+  .section-subscriptionWarning {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .subscription-warning-list {
+    margin-bottom: 100px;
+  }
+
+  .subscription-CTA {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+  }
+
   .section-favourites {
     padding-top: 200px;
     padding-bottom: 100px;
@@ -873,7 +1332,6 @@ Responsive
   .favourites-image-wrapper {
     text-align: center;
   }
-
   .favourites-image {
     width: 90%;
   }
@@ -915,5 +1373,246 @@ Responsive
   .image-404 {
     height: 8rem;
     fill: #000852;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /*　Bootstrap md 　*/
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("../images/hamburger.svg") !important;
+  }
+
+  .navbar-toggler-icon svg rect {
+    transition: transform 0.4s;
+  }
+  .toggleMenu1 {
+    transform: translate(5px, -1px) rotate(45deg);
+    transform-origin: 0 0;
+  }
+  .toggleMenu2 {
+    transform: translate(-8px, 7px) rotate(-45deg);
+    transform-origin: 0 0;
+  }
+  .navbar-collapse {
+    box-sizing: border-box;
+    padding: 15% 0;
+    text-align: center;
+    width: 100vh;
+    height: 90vh;
+    background-color: #ffffff;
+  }
+
+  .nav-item {
+    margin: 5% auto;
+  }
+  .my-nav-link {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000852;
+    margin: auto;
+  }
+  .my-nav-link svg {
+    width: 4rem;
+    height: 4rem;
+    fill: #000852;
+  }
+  .nav-link-active {
+    border-bottom: 3px solid #000852;
+    padding-bottom: 2px;
+  }
+  .hero-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-image {
+    width: 70%;
+    position: absolute;
+    left: 0px;
+    top: 30%;
+    z-index: 5;
+    animation: animateHero 2s ease;
+  }
+  .hero-image-background {
+    width: 75%;
+    position: absolute;
+    left: -30px;
+    top: 30%;
+    z-index: 0;
+    animation: animateHeroBackground 2s ease;
+  }
+  .btn-book {
+    width: 80%;
+    background-color: #000852;
+  }
+
+  .section-subscriptionAbout {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .subscription-title {
+    font-size: 3rem;
+  }
+  .subscription-explanation {
+    width: 70%;
+  }
+  .btn-subscription {
+    margin: 2rem auto;
+  }
+  .subscription-icon {
+    padding: 2rem 1rem;
+    font-size: 3rem;
+    border: 2px solid #001652;
+    -webkit-text-stroke-width: 2px;
+    height: 350px;
+    right: 10px;
+    text-align: center;
+  }
+
+  @keyframes animateSubscription {
+    0% {
+      bottom: 100px;
+    }
+    50% {
+      bottom: 110px;
+    }
+    100% {
+      bottom: 100px;
+    }
+  }
+
+  .section-subscriptionContents {
+    padding: 3rem 0;
+  }
+
+  .subscriptionContents-title-wrapper {
+    flex-direction: column;
+    margin-bottom: 3em;
+  }
+
+  .subscriptionContents-title {
+    font-size: 1.5rem;
+    margin: 15px auto;
+  }
+
+  .subscriptionContents-explanation {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  .subscriptionContent-border {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .subscriptionContent-subtitle {
+    font-size: 1rem;
+  }
+
+  .subscriptionContent-explanation {
+    font-size: 1rem;
+  }
+
+  .subscriptionContent-image {
+    border-radius: 10px;
+    margin-top: auto;
+  }
+
+  .subscriptionContents-fee-wrapper {
+    margin-top: 2rem;
+  }
+
+  .subscriptionContents-fee-small {
+    font-size: 1.5rem;
+  }
+
+  .subscriptionContents-fee-large {
+    font-size: 4rem;
+  }
+
+  .section-subscriptionWarning {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .subscription-warning-list {
+    margin-bottom: 100px;
+  }
+
+  .subscription-CTA {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+  }
+
+  .section-favourites {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  .btn-favourite {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .favourites-image-wrapper {
+    text-align: center;
+  }
+  .favourites-image {
+    width: 90%;
+  }
+  .section-profile {
+    padding-top: 100px;
+  }
+  .profile-title {
+    margin-top: 2rem;
+  }
+  .profile-image {
+    width: 100%;
+    border-radius: 5%;
+  }
+  .section-say-hi {
+    padding: 4rem 1rem;
+    border-radius: 12px;
+  }
+  .say-hi-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .say-hi-icon {
+    height: 4rem;
+    margin: 2rem 2rem 0;
+    animation: animateIcons 2s ease infinite;
+  }
+  .title-404 {
+    font-size: 6rem;
+  }
+
+  .subtitle-404 {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  .image-404 {
+    height: 8rem;
+    fill: #000852;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /*　Bootstrap lg 　*/
+  .subscription-explanation {
+    width: 80%;
+  }
+  .subscriptionContents-title {
+    font-size: 2rem;
+    margin: 15px auto;
+  }
+  .subscriptionContents-explanation {
+    font-size: 1rem;
+    width: 80%;
   }
 }
