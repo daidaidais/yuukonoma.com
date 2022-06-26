@@ -25,7 +25,7 @@ const Lesson = (props) => {
     <div className="class-wrapper">
       <Row>
         <Col
-          sm={{ span: 4, offset: 2 }}
+          sm={{ span: 8, offset: 2 }}
           md={{ span: 8, offset: 2 }}
           xl={{ span: 4, offset: 2 }}
           className="class-text-wrapper"
@@ -52,7 +52,11 @@ const Lesson = (props) => {
               </p>
             )}
         </Col>
-        <Col sm={4} md={{ span: 8, offset: 2 }} xl={{ span: 4, offset: 0 }}>
+        <Col
+          sm={{ span: 8, offset: 2 }}
+          md={{ span: 8, offset: 2 }}
+          xl={{ span: 4, offset: 0 }}
+        >
           <SlickSlider image={props.image} className="class-image-wrapper" />
           {props.link !== " " && props.link !== null && (
             <div className="btn-book-wrapper">

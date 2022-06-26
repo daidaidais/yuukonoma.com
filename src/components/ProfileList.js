@@ -31,7 +31,7 @@ const ProfileList = (props) => {
     <>
       <Row className="section-profile">
         <Col
-          sm={{ span: 5, offset: 1 }}
+          sm={{ span: 10, offset: 1 }}
           md={{ span: 10, offset: 1 }}
           xl={{ span: 5, offset: 1 }}
         >
@@ -49,7 +49,11 @@ const ProfileList = (props) => {
             />
           )}
         </Col>
-        <Col sm={5} md={{ span: 8, offset: 4 }} xl={{ span: 5, offset: 0 }}>
+        <Col
+          sm={{ span: 8, offset: 4 }}
+          md={{ span: 8, offset: 4 }}
+          xl={{ span: 5, offset: 0 }}
+        >
           <p className="profile-title">PROFILE</p>
           <p className="profile-text">
             {renderRichText(props.profile, options)}
@@ -80,8 +84,9 @@ const ProfileList = (props) => {
       </Row>
       <Row className="section-say-hi">
         <Col
-          sm={{ span: 5, offset: 1 }}
-          md={{ span: 5, offset: 1 }}
+          sm={{ span: 10, offset: 1 }}
+          md={{ span: 10, offset: 1 }}
+          lg={{ span: 5, offset: 1 }}
           xl={{ span: 5, offset: 1 }}
         >
           <span className="say-hi-text">
@@ -89,7 +94,13 @@ const ProfileList = (props) => {
             お気軽にご相談ください。
           </span>
         </Col>
-        <Col sm={5} md={5} xl={5} className="say-hi-icons">
+        <Col
+          sm={{ span: 10, offset: 1 }}
+          md={{ span: 10, offset: 1 }}
+          lg={5}
+          xl={5}
+          className="say-hi-icons"
+        >
           <a href="mailto:yuukonoma@gmail.com">
             <svg
               className="say-hi-icon"
