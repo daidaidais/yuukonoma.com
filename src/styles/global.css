@@ -153,7 +153,10 @@ Hero
 
 .hero-subtitle {
   font-size: 1rem;
+  color: white;
+  background-color: #000852;
   font-weight: bold;
+  display: inline-block;
   animation: animateHeroSubtitle 2s ease;
 }
 
