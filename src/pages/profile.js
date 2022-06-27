@@ -52,8 +52,8 @@ const Profile = () => {
     if (typeof window !== `undefined`) {
       window.onscroll = () => {
         setWindowBottom(window.pageYOffset + window.innerHeight);
+        setDocHeight(window.document.body.offsetHeight);
       };
-      setDocHeight(window.document.body.offsetHeight);
     }
   }, []);
 
