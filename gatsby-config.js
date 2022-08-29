@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "乃万 由芙子 | Yuuko Noma",
@@ -21,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "ye0oIhribg1ifniL6QxqXpYJVeT1a5BZHP2EHL4Q7To",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         spaceId: "57dkjpum7da6",
       },
     },
