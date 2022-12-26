@@ -465,7 +465,7 @@ Subscription
 .subscriptionContent-border {
   position: relative;
   width: 90%;
-  border: 6px dashed #ffffff;
+  border: 4px dashed #ffffff;
   border-radius: 20px;
   padding: 2rem;
   display: flex;
