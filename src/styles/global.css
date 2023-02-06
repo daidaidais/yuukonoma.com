@@ -380,6 +380,8 @@ Subscription
   color: #ffffff;
   border-radius: 20px;
   font-weight: bold;
+  position: relative;
+  z-index:3;
 }
 
 .btn-subscription:hover {
@@ -439,7 +441,7 @@ Subscription
 }
 
 .subscriptionContents-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   width: 100%;
   text-align: center;
   margin: 0 15px;
@@ -581,6 +583,246 @@ Subscription
   background-color: #ffaa7b;
   text-decoration: none;
 }
+
+/**************
+Meditation
+**************/
+
+.section-meditationHero{
+  height:80vh;
+  background-color: #FFE7CB;
+  padding: 250px 0;
+}
+
+.meditationHero-title{
+  padding-top:20px;
+  font-size:64px;
+  line-height: 90px;
+  font-weight:bold;
+  margin-bottom: 20px;
+}
+
+.meditationHero-image{
+  width:300px;
+  padding:0;
+}
+
+.section-meditationQuestion{
+  padding:60px 0;
+  background-color: #FFF4CB;
+}
+
+.meditationQuestion-list{
+   margin: 0 auto 60px;
+}
+
+.bullet-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bullet-point{
+  width:15px;
+  height:15px;
+  background-color: #ffaa7b;
+  border-radius: 2px;
+  align-self: flex-start;
+  transform: translateY(8px);
+}
+
+.bullet-text{
+  margin:0 10px;
+  font-size: 18px;
+  width:100%;
+}
+
+.meditation-slide-image{
+  box-shadow: 6px 6px 0px 2px #FFAA7B;
+  border-radius: 10px;
+}
+
+.section-meditationAbout{
+  padding:60px 0;
+  background-color: #FFF4CB;
+}
+
+.meditationAbout-title{
+  font-size: 32px;
+  font-weight: bold;
+  color:#001652;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.meditationAbout-text{
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.highlight-navy{
+  background-color: #001652;
+  color:white;
+  font-weight: bold;
+  padding: 0 4px;
+}
+
+.section-meditationCurriculum{
+  padding:60px 0;
+  background-color: #FFF4CB;
+}
+
+.meditationCurriculum-item{
+  margin-bottom: 30px;
+}
+
+.last{
+  margin-bottom: 60px;
+}
+
+.meditationCurriculum-title{
+  height: 140px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 140%;
+  color: #001652;
+  background: #FFFFFF;
+  border: 4px solid #001652;
+  border-radius: 10px;
+}
+
+.dotted{
+  background-color: #FFF4CB;
+  border: 4px dashed #001652;
+}
+
+.meditationCurriculum-list{
+
+}
+
+.meditationCurriculum-note{
+
+}
+
+.meditationCurriculum-plus{
+  font-size: 64px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.section-meditationFee{
+  padding:60px 0;
+  background-color: #FFF4CB;
+}
+
+.meditationFee-item{
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+}
+
+.meditationFee-number{
+  width:60px;
+  height:60px;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background-color: #001652;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meditationFee-wrapper{
+  margin-left:60px;
+}
+
+.meditationFee-title{
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.1em;
+}
+
+.meditationFee-explanation{
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  margin:0;
+}
+
+.section-meditationCta{
+  background-color: #ffaa7b;
+  padding:150px 0;
+}
+
+.meditationCta-wrapper{
+  text-align: center;
+}
+
+.large{
+  font-size: 24px;
+  padding: 30px 80px;
+  margin:0 auto;
+}
+
+.large:hover {
+  color: #001652;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+.large:active {
+  color: #001652;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.section-meditationTrial{
+  background-color: #001652;
+  padding:150px 0;
+}
+
+.trial{
+  font-size: 24px;
+  padding: 30px 80px;
+  margin:0 auto;
+  color:#001652;
+  background-color: white;
+}
+
+.trial:hover {
+  color: white;
+  background-color: #ffaa7b;
+  text-decoration: none;
+}
+.large:active {
+  color: white;
+  background-color: #ffaa7b;
+  text-decoration: none;
+}
+
+.meditationTrial-title{
+  color:white;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+
+.meditationTrial-text{
+  color:white;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px
+}
+
 
 /**************
 Favourites
@@ -1063,6 +1305,66 @@ Responsive
     padding: 1rem 1rem;
   }
 
+  .section-meditationHero{
+    position: relative;
+    height:95vh;
+  }
+  
+  .meditationHero-image-wrapper{
+    position: absolute;
+    top:30%;
+    right:-50%;
+  }
+
+  .bullet-text{
+    width:100%;
+    font-size: 1rem;
+  }
+
+  .meditationAbout-text{
+    font-size: 1rem;
+  }
+
+  .meditationCurriculum-title{
+    font-size: 1.2rem;
+  }
+
+  .meditationFee-item{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meditationFee-number{
+    font-size: 1.5rem;
+  }
+
+  .meditationFee-wrapper{
+    margin-left: 0;
+  }
+
+  .meditationFee-title{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .meditationFee-explanation{
+    font-size: 1rem;;
+  }
+
+  .large{
+    font-size: 1.2rem;
+  }
+
+  .meditationTrial-title{
+    font-size: 1.2rem;
+  }
+
+  .meditationTrial-text{
+    font-size: 1.2rem;
+    width:80%;
+    margin: auto;
+  }
+
   .section-favourites {
     padding: 1rem;
     padding-top: 150px;
@@ -1327,6 +1629,66 @@ Responsive
     padding: 1rem 1rem;
   }
 
+  .section-meditationHero{
+    position: relative;
+    height:80vh;
+  }
+  
+  .meditationHero-image-wrapper{
+    position: absolute;
+    top:30%;
+    right:-50%;
+  }
+
+  .bullet-text{
+    width:100%;
+    font-size: 1rem;
+  }
+
+  .meditationAbout-text{
+    font-size: 1rem;
+  }
+
+  .meditationCurriculum-title{
+    font-size: 1.2rem;
+  }
+
+  .meditationFee-item{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meditationFee-number{
+    font-size: 1.5rem;
+  }
+
+  .meditationFee-wrapper{
+    margin-left: 0;
+  }
+
+  .meditationFee-title{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .meditationFee-explanation{
+    font-size: 1rem;;
+  }
+
+  .large{
+    font-size: 1.2rem;
+  }
+
+  .meditationTrial-title{
+    font-size: 1.2rem;
+  }
+
+  .meditationTrial-text{
+    font-size: 1.2rem;
+    width:80%;
+    margin: auto;
+  }
+
   .section-favourites {
     padding-top: 200px;
     padding-bottom: 100px;
@@ -1554,6 +1916,47 @@ Responsive
     padding: 1rem 1rem;
   }
 
+  .bullet-text{
+    width:100%;
+  }
+
+  .meditationCurriculum-title{
+    font-size:1.5rem;
+  }
+
+  .meditationFee-item{
+    
+  }
+
+  .meditationFee-number{
+    font-size: 1.8rem;
+  }
+
+  .meditationFee-wrapper{
+  }
+
+  .meditationFee-title{
+    font-size: 1.8rem;
+  }
+
+  .meditationFee-explanation{
+    font-size: 1rem;;
+  }
+
+  .large{
+    font-size: 1.2rem;
+  }
+
+  .meditationTrial-title{
+    font-size: 1.2rem;
+  }
+
+  .meditationTrial-text{
+    font-size: 1.2rem;
+    width:80%;
+    margin: auto;
+  }
+
   .section-favourites {
     padding-top: 200px;
     padding-bottom: 100px;
@@ -1615,11 +2018,14 @@ Responsive
     width: 80%;
   }
   .subscriptionContents-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 15px auto;
   }
   .subscriptionContents-explanation {
     font-size: 1rem;
     width: 80%;
+  }
+  .meditationCurriculum-title{
+    font-size:1.5rem;
   }
 }

@@ -36,14 +36,16 @@ const Header = () => {
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
-            <a
+          <AniLink
+              cover
+              direction="right"
+              bg={coverGradient}
+              to="/meditation"
               className="my-nav-link"
-              href="https://note.com/yuuko_no_ma"
-              target="_blank"
-              rel="noreferrer"
+              activeClassName="nav-link-active"
             >
-              BLOG
-            </a>
+              瞑想講座
+            </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
             <AniLink
