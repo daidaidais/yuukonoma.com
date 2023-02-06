@@ -656,13 +656,13 @@ Meditation
   font-weight: bold;
   color:#FFFFFF;
   letter-spacing: 0.1em;
-  margin-bottom: 40px;
   background-color: #001652;
   padding:2px 4px;
-  display: inline-block;
+  display: inline;
 }
 
 .meditationAbout-text{
+  margin-top: 40px;
   font-size: 18px;
   letter-spacing: 0.1em;
 }
