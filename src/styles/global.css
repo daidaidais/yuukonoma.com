@@ -705,14 +705,6 @@ Meditation
   border: 4px dashed #001652;
 }
 
-.meditationCurriculum-list{
-
-}
-
-.meditationCurriculum-note{
-
-}
-
 .meditationCurriculum-plus{
   font-size: 64px;
   font-weight: bold;
@@ -1926,16 +1918,9 @@ Responsive
   .meditationCurriculum-title{
     font-size:1.5rem;
   }
-
-  .meditationFee-item{
-    
-  }
-
+  
   .meditationFee-number{
     font-size: 1.8rem;
-  }
-
-  .meditationFee-wrapper{
   }
 
   .meditationFee-title{
