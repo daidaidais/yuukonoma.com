@@ -1,4 +1,5 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { Navbar, Nav } from "react-bootstrap";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
@@ -8,7 +9,15 @@ const Header = () => {
 
   return (
     <Navbar expand="lg" fixed="top" className="mt-3 mb-3">
-      <Navbar.Toggle aria-controls="navbarResponsive" />
+      <Navbar.Toggle aria-controls="navbarResponsive">
+        <StaticImage
+                  src="../images/hamburger.png"
+                  alt="hamburger.png"
+                  className="hamburger"
+                  loading="eager"
+                  placeholder="blurred"
+                />
+      </Navbar.Toggle>
       <Navbar.Collapse id="navbarResponsive">
         <Nav as="ul" className="ml-auto">
           <Nav.Item as="li">

@@ -68,6 +68,10 @@ Nav bar
   fill: #ffffff;
 }
 
+.hamburger{
+  width:30px;
+}
+
 /**************
 Hero
 **************/
@@ -1138,14 +1142,14 @@ Responsive
     box-sizing: border-box;
     padding: 15% 0;
     text-align: center;
-    width: 100vh;
+    width: 100vw;
     height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
   }
 
   .nav-item {
-    margin: 10% auto;
+    margin: 8% auto;
   }
   .my-nav-link {
     font-size: 1.5rem;
@@ -1165,6 +1169,7 @@ Responsive
   .section-hero {
     padding-top: 100px;
     margin-bottom: 0%;
+    height:90vh;
   }
   .hero-image-wrapper {
     width: 100%;
@@ -1477,7 +1482,7 @@ Responsive
     box-sizing: border-box;
     padding: 15% 0;
     text-align: center;
-    width: 100vh;
+    width: 100vw;
     height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
@@ -1764,7 +1769,7 @@ Responsive
     box-sizing: border-box;
     padding: 5% 0;
     text-align: center;
-    width: 100vh;
+    width: 100vw;
     height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
@@ -1918,7 +1923,7 @@ Responsive
   .meditationCurriculum-title{
     font-size:1.5rem;
   }
-  
+
   .meditationFee-number{
     font-size: 1.8rem;
   }
