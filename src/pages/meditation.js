@@ -255,19 +255,6 @@ const Meditation = () => {
                         </div>
                     </div>
                 </Col>
-                <Col
-                sm={{ span: 10, offset: 1 }}
-                md={{ span: 10, offset: 1 }}
-                lg={{ span: 6, offset: 3}}
-                >
-                    <StaticImage
-                    src="../images/meditation3.jpg"
-                    alt="meditation3.jpg"
-                    className="meditation-slide-image"
-                    loading="eager"
-                    placeholder="blurred"
-                />
-                </Col>
             </Row>
 
             <Row className="section-meditationCta">
