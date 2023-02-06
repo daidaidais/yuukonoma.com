@@ -1075,7 +1075,7 @@ Footer
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: animate404 6s linear infinite;
+  animation: animate404 10s linear infinite;
 }
 
 .title-404 {
