@@ -1,14 +1,11 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect } from "react";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { IEContext } from "./Layout";
 
 const SubscriptionContent = (props) => {
   const wrapperRef = useRef();
   useEffect(() => {}, [props]);
-
-  const isIE = useContext(IEContext);
 
   const Text = ({ children }) => children;
   const InlineLink = ({ link, children }) => (
