@@ -242,16 +242,16 @@ const Meditation = () => {
                         <p className="meditationFee-number">1</p>
                         <div className="meditationFee-wrapper">
                             <p className="meditationFee-title">瞑想講座＋コーチング</p>
-                            <p className="meditationFee-explanation">通常価格：31万円(税込)</p>
-                            <p className="meditationFee-explanation">3/21までの早割価格：26万円(税込)</p>
+                            <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>31万円(税込)</span></p>
+                            <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">26万円(税込)</span></p>
                         </div>
                     </div>
                     <div className="meditationFee-item">
                         <p className="meditationFee-number">2</p>
                         <div className="meditationFee-wrapper">
                             <p className="meditationFee-title">瞑想講座のみ</p>
-                            <p className="meditationFee-explanation">通常価格：19万円(税込)</p>
-                            <p className="meditationFee-explanation">3/21までの早割価格：17万円(税込)</p>
+                            <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>19万円(税込)</span></p>
+                            <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">17万円(税込)</span></p>
                         </div>
                     </div>
                 </Col>

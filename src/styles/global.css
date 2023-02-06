@@ -623,7 +623,7 @@ Meditation
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .bullet-point{
@@ -665,6 +665,7 @@ Meditation
   margin-top: 40px;
   font-size: 18px;
   letter-spacing: 0.1em;
+  line-height: 150%;
 }
 
 .highlight-navy{
@@ -816,7 +817,7 @@ Meditation
 
 .meditationTrial-text{
   color:white;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 0.1em;
   margin-bottom: 40px
 }
