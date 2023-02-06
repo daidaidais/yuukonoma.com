@@ -88,7 +88,7 @@ const Subscription = () => {
           lg={{ span: 7, offset: 1 }}
         >
           <p className="subscription-title">
-            サブスクリプション
+            サブスク
             <br />
             はじめました。
           </p>
