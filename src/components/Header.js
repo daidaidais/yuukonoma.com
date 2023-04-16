@@ -29,7 +29,7 @@ const Header = () => {
               className="my-nav-link"
               activeClassName="nav-link-active"
             >
-              LESSONS
+              TOP
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
