@@ -33,12 +33,6 @@ const Index = () => {
 
   return (
     <Layout popIn={popIn}>
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap&subset=japanese"
-          rel="stylesheet"
-        />
-      </Helmet>
       <SEO title="Top" />
       <Hero />
       <Schedule title={data.contentfulSchedule.title} />

@@ -75,12 +75,6 @@ const Profile = () => {
 
   return (
     <Layout popIn={popIn}>
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap&subset=japanese"
-          rel="stylesheet"
-        />
-      </Helmet>
       <SEO title="Profile" />
       {data.allContentfulProfile.nodes[0].favourites.map(
         ({ title, explanation, buttonText, link, image }, index) => (

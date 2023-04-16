@@ -7,12 +7,6 @@ import Layout from "../components/Layout";
 const NotFoundPage = () => {
   return (
     <Layout popIn>
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap&subset=japanese"
-          rel="stylesheet"
-        />
-      </Helmet>
       <SEO title="404: Not found" />
       <div className="section-404">
         <h1 className="title-404">404</h1>
