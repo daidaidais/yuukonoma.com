@@ -37,11 +37,11 @@ const Header = () => {
               cover
               direction="right"
               bg={coverGradient}
-              to="/subscription"
+              to="/hypnobirthing"
               className="my-nav-link"
               activeClassName="nav-link-active"
             >
-              SUBSCRIPTION
+              HYPNOBIRTHING
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">

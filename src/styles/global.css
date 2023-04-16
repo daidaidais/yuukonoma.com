@@ -1,6 +1,6 @@
-/**************
+/****************************
 General
-**************/
+****************************/
 html,
 body {
   font-family: Noto Sans JP;
@@ -23,10 +23,9 @@ body {
   opacity: 0;
 }
 
-/**************
+/****************************
 Nav bar
-**************/
-
+****************************/
 .navbar {
   z-index: 20;
 }
@@ -72,9 +71,9 @@ Nav bar
   width:30px;
 }
 
-/**************
+/****************************
 Hero
-**************/
+****************************/
 .section-hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -211,9 +210,9 @@ Hero
   text-decoration: none;
   color: #000852;
 }
-/**************
+/****************************
 Schedule
-**************/
+****************************/
 .section-schedule {
   background-color: #fff4cb;
   padding-top: 200px;
@@ -316,9 +315,9 @@ Schedule
   text-decoration: underline;
 }
 
-/**************
+/****************************
 SLICK SLIDER
-**************/
+****************************/
 .slick-dots {
   display: flex;
   position: static;
@@ -353,10 +352,9 @@ SLICK SLIDER
   max-width: 720px;
 }
 
-/**************
+/****************************
 Subscription
-**************/
-
+****************************/
 .section-subscriptionAbout {
   background-color: #fff4cb;
   padding-top: 200px;
@@ -588,10 +586,9 @@ Subscription
   text-decoration: none;
 }
 
-/**************
+/****************************
 Meditation
-**************/
-
+****************************/
 .section-meditationHero{
   background-color: #FFE7CB;
   padding: 250px 0;
@@ -611,34 +608,12 @@ Meditation
 }
 
 .section-meditationQuestion{
-  padding:60px 0;
+  padding:80px 0;
   background-color: #FFF4CB;
 }
 
 .meditationQuestion-list{
    margin: 0 auto 60px;
-}
-
-.bullet-wrapper{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.bullet-point{
-  width:15px;
-  height:15px;
-  background-color: #ffaa7b;
-  border-radius: 2px;
-  align-self: flex-start;
-  transform: translateY(8px);
-}
-
-.bullet-text{
-  margin:0 10px;
-  font-size: 18px;
-  width:100%;
 }
 
 .meditation-slide-image{
@@ -647,7 +622,7 @@ Meditation
 }
 
 .section-meditationAbout{
-  padding:60px 0;
+  padding:80px 0;
   background-color: #FFF4CB;
 }
 
@@ -676,7 +651,7 @@ Meditation
 }
 
 .section-meditationCurriculum{
-  padding:60px 0;
+  padding:80px 0;
   background-color: #FFF4CB;
 }
 
@@ -718,7 +693,7 @@ Meditation
 }
 
 .section-meditationFee{
-  padding:60px 0;
+  padding:80px 0;
   background-color: #FFF4CB;
 }
 
@@ -822,10 +797,174 @@ Meditation
   margin-bottom: 40px
 }
 
+/****************************
+Bullet
+****************************/
 
-/**************
+.bullet-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bullet-point{
+  width:15px;
+  height:15px;
+  background-color: #ffaa7b;
+  border-radius: 2px;
+  align-self: flex-start;
+  transform: translateY(8px);
+}
+
+.yellow{
+  background-color: #FFE7CB;
+}
+
+.bullet-text{
+  margin:0 10px;
+  font-size: 18px;
+  width:100%;
+}
+
+/****************************
+Hypnobirthing
+****************************/
+.section-hypnobirthHero{
+  background-color: #FFF4CB;
+  padding: 250px 0 150px;
+}
+
+.hypnobirthHero-title{
+  padding-top:20px;
+  font-size:48px;
+  font-weight:bold;
+  line-height: 40px;
+}
+
+.hypnobirthHero-subtitle{
+  font-size:36px;
+  margin-bottom: 40px;
+  font-weight:300;
+}
+
+.hypnobirthHero-image{
+  width:200px;
+  padding:0;
+}
+
+.hypnobirth-explanation {
+  margin-top: 4rem;
+  line-height: 28px;
+}
+
+.section-hypnobirthAbout{
+  background-color: #FFE7CB;
+  padding: 80px 0;
+}
+
+.hypnobirthAbout-explanation {
+  font-size: 1.2rem;
+}
+
+.section-hypnobirthMerits{
+  background-color: #FFE7CB;
+  padding: 80px 0;
+}
+
+.section-hypnobirthContent{
+  background-color: #FFE7CB;
+  padding: 80px 0;
+}
+
+.hypnobirthContent-text{
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  line-height: 150%;
+}
+
+.hypnobirthContent-border {
+  position: relative;
+  width: 100%;
+  border: 3px dashed #ffaa7b;
+  border-radius: 20px;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.hypnobirthContent-index {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #ffaa7b;
+  color: white;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.hypnobirthContent-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.section-hypnobirthDetails{
+  background-color: #FFF4CB;
+  padding: 80px 0;
+}
+
+.hypnobirthDetails-item{
+  margin-bottom: 30px;
+}
+
+.hypnobirthDetails-title{
+  display: flex;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 140%;
+  color: #001652;
+  margin-bottom: 40px;
+}
+
+.hypnobirthDetails-date{
+  margin-bottom: 10px;
+}
+
+.hypnobirthDetails-date-left{
+  font-size: 20px;
+  font-weight:bold;
+  margin-right: 20px;
+}
+
+.hypnobirthDetails-date-right{
+  font-size: 20px;
+}
+
+.hypnobirthDetails-notes{
+  margin-top: 40px;
+}
+
+.hypnobirthDetails-notes li{
+  margin: 6px 0;
+}
+
+.section-hypnobirthCta{
+  background-color: #FFF4CB;
+  padding: 0 0 80px;
+}
+
+/****************************
 Favourites
-**************/
+****************************/
 .section-favourites {
   background-color: #fff4cb;
   padding-top: 200px;
@@ -893,9 +1032,9 @@ Favourites
   text-decoration: none;
 }
 
-/**************
+/****************************
 Profile
-**************/
+****************************/
 .section-profile {
   background-color: #ffaa7b;
   padding-top: 200px;
@@ -989,9 +1128,9 @@ Say Hi
   }
 }
 
-/**************
+/****************************
 Footer
-**************/
+****************************/
 .section-footer {
   background-color: #ffffff;
   position: relative;
@@ -1065,9 +1204,9 @@ Footer
   -webkit-text-stroke-color: #000852;
 }
 
-/**************
+/****************************
 404
-**************/
+****************************/
 
 .section-404 {
   height: calc(100vh - 150px);
@@ -1107,9 +1246,9 @@ Footer
   }
 }
 
-/**************
+/****************************
 Responsive
-**************/
+****************************/
 
 @media screen and (max-width: 576px) {
   /*　Bootstrap xs */
@@ -1456,7 +1595,70 @@ Responsive
     height: 8rem;
     fill: #000852;
   }
+
+  .section-hypnobirthHero{
+    position: relative;
+    padding: 150px 0 150px;
+  }
+
+  .hypnobirthHero-title{
+    font-size: 42px;
+  }
+
+  .hypnobirthHero-subtitle{
+    font-size: 32px;
+  }
+
+  .hypnobirthHero-explanation{
+    position: relative;
+    display: inline;
+    z-index: 5;
+    background-color: #fff4cb;
+  }
+
+  .hypnobirthHero-image-wrapper{
+    position: absolute;
+    top:30%;
+    right:-40%;
+    z-index: 0;
+  }
+
+  .btn-subscription.block{
+    display: block;
+    width:80%;
+    margin: 2rem 0;
+  }
+
+  .section-hypnobirthAbout{
+    position: relative;
+    z-index: 1;
+  }
+
+  .hypnobirthAbout-explanation{
+    font-size: 1rem;
+  }
+
+  .hypnobirthContent-text{
+    font-size: 1rem;
+  }
+
+  .hypnobirthContent-border {
+    padding: 2rem;
+  }
+  
+  .hypnobirthContent-index {
+    font-size: 1.5rem;
+  }
+  
+  .hypnobirthContent-title {
+    font-size: 1.5rem;
+  }
+
+  .hypnobirthDetails-item{
+    margin-left: 10px;
+  }
 }
+
 @media screen and (min-width: 576px) and (max-width: 768px) {
   /*　Bootstrap sm 　*/
   .navbar-toggler {
@@ -1742,6 +1944,30 @@ Responsive
     height: 8rem;
     fill: #000852;
   }
+
+  .section-hypnobirthHero{
+    position: relative;
+  }
+
+  .hypnobirthHero-explanation{
+    position: relative;
+    display: inline;
+    z-index: 5;
+    background-color: #fff4cb;
+  }
+
+  .hypnobirthHero-image-wrapper{
+    position: absolute;
+    top:30%;
+    right:-50%;
+    z-index: 0;
+  }
+
+  .btn-subscription.block{
+    display: block;
+    width:60%;
+    margin: 2rem 0;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2002,6 +2228,11 @@ Responsive
   .image-404 {
     height: 8rem;
     fill: #000852;
+  }
+
+  .hypnobirthHero-image{
+    width:150px;
+    padding:0;
   }
 }
 
