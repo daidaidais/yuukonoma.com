@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import { Helmet } from "react-helmet";
 import Favourites from "../components/Favourites";
 import ProfileList from "../components/ProfileList";
 import { useStaticQuery, graphql } from "gatsby";
@@ -31,9 +30,6 @@ const Profile = () => {
               gatsbyImageData
               file {
                 fileName
-              }
-              fluid {
-                src
               }
             }
             link

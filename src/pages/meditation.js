@@ -1,12 +1,31 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import { Helmet } from "react-helmet";
 import { Row, Col } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import Bullet from "../components/Bullet";
+import { useStaticQuery, graphql } from "gatsby";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 
 const Meditation = () => {
+    const data = useStaticQuery(graphql`
+    {
+      allContentfulMeditation {
+        nodes {
+          dates {
+            title
+            dates {
+                raw
+              }
+            fee
+          }
+          link
+        }
+      }
+    }
+  `)
+
     const [windowBottom, setWindowBottom] = useState(0);
     const [docHeight, setDocHeight] = useState(0);
     const [popIn, setPopIn] = useState(false);
@@ -21,7 +40,31 @@ const Meditation = () => {
       }, []);
 
     if (docHeight - windowBottom < 100 && popIn === false) setPopIn(true);
-    else if (docHeight - windowBottom >= 100 && popIn === true) setPopIn(false);
+    else if (docHeight - windowBottom >= 100 && popIn === true) setPopIn(false)
+
+    const Text = ({ children }) => children;
+    const InlineLink = ({ link, children }) => (
+        <a href={link} className="class-link" target="_blank" rel="noreferrer">
+        {children}
+        </a>
+    );
+
+    const options = {
+        renderNode: {
+            [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+            [INLINES.HYPERLINK]: ({ data }, children) => (
+                <InlineLink link={data.uri}>{children}</InlineLink>
+            ),
+            [BLOCKS.UL_LIST]: (node, children) => (
+                <ul className="meditationCurriculum-list">{children}</ul>
+              ),
+        },
+        renderText: text => {
+            return text.split('\n').reduce((children, textSegment, index) => {
+              return [...children, index > 0 && <br key={index} />, textSegment];
+            }, []);
+          },
+    };
 
     return (
         <Layout popIn={popIn}>
@@ -43,7 +86,7 @@ const Meditation = () => {
                         養成講座
                     </p>
                     <a
-                        href="https://forms.gle/uhAnKw8ufgN6TY1A7"
+                        href={data.allContentfulMeditation.nodes[0].link}
                         className="btn-subscription"
                         target="_blank"
                         rel="noreferrer"
@@ -187,11 +230,6 @@ const Meditation = () => {
                 >
                     <div className="meditationCurriculum-item">
                         <p className="meditationCurriculum-title">瞑想指導者養成講座2ヶ月講座<br />(修了書発行あり)</p>
-                        <ul className="meditationCurriculum-list">
-                            <li>5/11(木)〜6/29(木)</li>
-                            <li>毎週木曜日</li>
-                            <li>10:00〜12:30(講座✕瞑想実践)</li>
-                        </ul>
                     </div>
                     <div className="meditationCurriculum-plus">+</div>
                     <div className="meditationCurriculum-item last">
@@ -231,23 +269,21 @@ const Meditation = () => {
                 lg={{ span: 8, offset: 2 }}
                 xl={{ span: 8, offset: 4 }}
                 xxl={{ span: 4, offset: 4 }}
-                >
+                >   
+                {data.allContentfulMeditation.nodes[0].dates.map((date,index) => (
                     <div className="meditationFee-item">
-                        <p className="meditationFee-number">1</p>
-                        <div className="meditationFee-wrapper">
-                            <p className="meditationFee-title">瞑想講座＋コーチング</p>
-                            <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>31万円(税込)</span></p>
-                            {/* <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">26万円(税込)</span></p> */}
-                        </div>
+                    <p className="meditationFee-number">{index+1}</p>
+                    <div className="meditationFee-wrapper">
+                        <p className="meditationFee-title">{date.title}</p>
+                        <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>{date.fee}</span></p>
+                        {/* <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">26万円(税込)</span></p> */}
+                        {renderRichText(
+                            date.dates,
+                            options
+                        )}
                     </div>
-                    <div className="meditationFee-item">
-                        <p className="meditationFee-number">2</p>
-                        <div className="meditationFee-wrapper">
-                            <p className="meditationFee-title">瞑想講座のみ</p>
-                            <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>19万円(税込)</span></p>
-                            {/* <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">17万円(税込)</span></p> */}
-                        </div>
-                    </div>
+                </div>
+                ))}
                 </Col>
             </Row>
 
@@ -259,7 +295,7 @@ const Meditation = () => {
                 className="meditationCta-wrapper"
                 >
                     <a
-                        href="https://forms.gle/uhAnKw8ufgN6TY1A7"
+                        href={data.allContentfulMeditation.nodes[0].link}
                         className="btn-subscription large"
                         target="_blank"
                         rel="noreferrer"

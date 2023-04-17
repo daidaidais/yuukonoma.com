@@ -1,13 +1,38 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
-import { Helmet } from "react-helmet";
 import { Row, Col } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
 import Bullet from "../components/Bullet";
 import HypnobirthContent from "../components/HypnobirthContent";
+import { useStaticQuery, graphql } from "gatsby";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 
 const Hypnobirthing = () => {
+    const data = useStaticQuery(graphql`
+    {
+      allContentfulHypnobirthing {
+        nodes {
+          about {
+            raw
+          }
+          intro {
+            raw
+          }
+          dates {
+            title
+            dates
+            notes {
+              raw
+            }
+          }
+          link
+        }
+      }
+    }
+  `)
+    
     const [windowBottom, setWindowBottom] = useState(0);
     const [docHeight, setDocHeight] = useState(0);
     const [popIn, setPopIn] = useState(false);
@@ -23,6 +48,30 @@ const Hypnobirthing = () => {
 
     if (docHeight - windowBottom < 100 && popIn === false) setPopIn(true);
     else if (docHeight - windowBottom >= 100 && popIn === true) setPopIn(false);
+
+    const Text = ({ children }) => children;
+    const InlineLink = ({ link, children }) => (
+        <a href={link} className="class-link" target="_blank" rel="noreferrer">
+        {children}
+        </a>
+    );
+
+    const options = {
+        renderNode: {
+            [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+            [INLINES.HYPERLINK]: ({ data }, children) => (
+                <InlineLink link={data.uri}>{children}</InlineLink>
+            ),
+            [BLOCKS.UL_LIST]: (node, children) => (
+                <ul className="hypnobirthDetails-notes">{children}</ul>
+              ),
+        },
+        renderText: text => {
+            return text.split('\n').reduce((children, textSegment, index) => {
+              return [...children, index > 0 && <br key={index} />, textSegment];
+            }, []);
+          },
+    };
 
     const contentBullet1 = [
         "ヒプノバーシングの哲学とそのはじまり",
@@ -103,13 +152,13 @@ const Hypnobirthing = () => {
                         the Mongan Method
                     </p>
                     <p className="hypnobirthHero-explanation">
-                    穏やかなお産のためにできること。<br/><br/>
-                    お母さんは楽に快適に、そして赤ちゃんを優しくこの世界に導くために。<br/><br/>
-                    ヒプノバーシングはお母さんがもともと持つ自然分娩能力を最大限に引き出し、お産を『より自然に、安全に、快適なもの』へと導いてくれる米国生まれのメソッドです。<br/><br/>
-                    このクラスでは、お母さんと赤ちゃんが深いリラックスの中でお産を迎えられるように研究された12.5時間の総合的な出産準備プログラムです。
+                    {renderRichText(
+                        data.allContentfulHypnobirthing.nodes[0].intro,
+                        options
+                    )}
                     </p>
                     <a
-                        href="https://checkout.square.site/buy/QERWN36QXRJLYY2Q6LAJURTN"
+                        href={data.allContentfulHypnobirthing.nodes[0].link}
                         className="btn-subscription block"
                         target="_blank"
                         rel="noreferrer"
@@ -154,11 +203,10 @@ const Hypnobirthing = () => {
                 className="meditationQuestion-list"
                 >
                     <p className="hypnobirthAbout-explanation">
-                    ヒプノバーシングはお母さんがもともと持つ自然分娩能力を最大限に引き出し、
-                    お産を『より自然に、安全に、快適なもの』へと導いてくれる米国生まれのメソッドで、1984年に始まり現在では48カ国に広がっています。<br/><br/>
-                    ヒプノバーシングはお母さんが健康であれば、もうすでに備わっている自然な力を取り戻すことでより楽に、快適に、
-                    ときには痛みのない出産ができるという様々なエビデンスに基づきます。ヒプノバーシングのヒプノとはヒプノシス(催眠)から来ています。
-                    つまり、自らを深いリラックス状態にすること(自己催眠)により緊張と痛みから開放し心地よいお産へと導くものです。
+                    {renderRichText(
+                        data.allContentfulHypnobirthing.nodes[0].about,
+                        options
+                    )}
                     </p>
                 </Col>
             </Row>
@@ -305,33 +353,17 @@ const Hypnobirthing = () => {
                 xl={{ span: 6, offset: 3 }}
                 >
                     <div className="hypnobirthDetails-item">
-                        <p className="hypnobirthDetails-title">5月日曜日クラス</p>
-                        <div className="hypnobirthDetails-date">
-                            <span className="hypnobirthDetails-date-left">DAY 1</span>
-                            <span className="hypnobirthDetails-date-right">5/21(日)  9：00〜12：30</span>
-                        </div>
-                        <div className="hypnobirthDetails-date">
-                            <span className="hypnobirthDetails-date-left">DAY 2</span>
-                            <span className="hypnobirthDetails-date-right">5/28(日) 9：00〜11：30</span>
-                        </div>
-                        <div className="hypnobirthDetails-date">
-                            <span className="hypnobirthDetails-date-left">DAY 3</span>
-                            <span className="hypnobirthDetails-date-right">6/04(日) 9：00〜11：30</span>
-                        </div>
-                        <div className="hypnobirthDetails-date">
-                            <span className="hypnobirthDetails-date-left">DAY 4</span>
-                            <span className="hypnobirthDetails-date-right">6/11(日) 9：00〜11：30</span>
-                        </div>
-                        <div className="hypnobirthDetails-date">
-                            <span className="hypnobirthDetails-date-left">DAY 5</span>
-                            <span className="hypnobirthDetails-date-right">6/18(日) 9：00〜11：30</span>
-                        </div>
-                        <ul className="hypnobirthDetails-notes">
-                            <li><b>初回のみ3.5時間</b>となります</li>
-                            <li>レッスンは<b>全てオンライン（Zoom）</b>にて開催致します。</li>
-                            <li>お申し込み期日：<b>5/15まで</b></li>
-                            <li>価格：<b>￥60,500（税込）</b></li>
-                        </ul>
+                        <p className="hypnobirthDetails-title">{data.allContentfulHypnobirthing.nodes[0].dates[0].title}</p>
+                        {data.allContentfulHypnobirthing.nodes[0].dates[0].dates.map((date,index) => (
+                            <div className="hypnobirthDetails-date">
+                                <span className="hypnobirthDetails-date-left">{`DAY ${index+1}`}</span>
+                                <span className="hypnobirthDetails-date-right">{date}</span>
+                            </div>
+                            ))}
+                        {renderRichText(
+                            data.allContentfulHypnobirthing.nodes[0].dates[0].notes,
+                            options
+                        )}
                     </div>
                 </Col>
             </Row>
@@ -344,7 +376,7 @@ const Hypnobirthing = () => {
                 className="meditationCta-wrapper"
                 >
                     <a
-                        href="https://checkout.square.site/buy/QERWN36QXRJLYY2Q6LAJURTN"
+                        href={data.allContentfulHypnobirthing.nodes[0].link}
                         className="btn-subscription large"
                         target="_blank"
                         rel="noreferrer"
