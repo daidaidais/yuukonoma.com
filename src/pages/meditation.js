@@ -21,6 +21,7 @@ const Meditation = () => {
             fee
           }
           link
+          lineLink
         }
       }
     }
@@ -315,7 +316,7 @@ const Meditation = () => {
                     <p className="meditationTrial-title">無料個別面談をご希望の方</p>
                     <p className="meditationTrial-text">こちらより、『個人面談希望』とご連絡くださいませ ✿</p>
                     <a
-                        href="https://lin.ee/6h4G8ht"
+                        href={data.allContentfulMeditation.nodes[0].lineLink}
                         className="btn-subscription large trial"
                         target="_blank"
                         rel="noreferrer"
