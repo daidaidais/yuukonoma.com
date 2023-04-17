@@ -136,7 +136,6 @@ const Hypnobirthing = () => {
     return (
         <Layout popIn={popIn}>
             <SEO title="Hypnobirthing" />
-
             <Row className="section-hypnobirthHero">
                 <Col
                 xs={12}
