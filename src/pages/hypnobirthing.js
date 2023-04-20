@@ -8,6 +8,7 @@ import HypnobirthContent from "../components/HypnobirthContent";
 import { useStaticQuery, graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import Fade from 'react-reveal/Fade';
 
 const Hypnobirthing = () => {
     const data = useStaticQuery(graphql`
@@ -73,6 +74,14 @@ const Hypnobirthing = () => {
           },
     };
 
+    const contentTitle = [
+        "心地いいお産への心の土台作り",
+        "赤ちゃんと恋に落ちよう",
+        "赤ちゃんと共により深いリラクゼーションへ",
+        "お産の流れを知ろう",
+        "赤ちゃんの誕生と絆を深めるとき"
+    ]
+
     const contentBullet1 = [
         "ヒプノバーシングの哲学とそのはじまり",
         "女性と出産の歴史",
@@ -133,6 +142,14 @@ const Hypnobirthing = () => {
         "産後の３ヶ月について",
     ];
 
+    const contentBullet = [
+        contentBullet1,
+        contentBullet2,
+        contentBullet3,
+        contentBullet4,
+        contentBullet5
+    ]
+
     return (
         <Layout popIn={popIn}>
             <SEO title="Hypnobirthing" />
@@ -156,6 +173,7 @@ const Hypnobirthing = () => {
                         options
                     )}
                     </p>
+                    <Fade bottom>
                     <a
                         href={data.allContentfulHypnobirthing.nodes[0].link}
                         className="btn-subscription block"
@@ -164,6 +182,7 @@ const Hypnobirthing = () => {
                     >
                         お申し込みはこちら
                     </a>
+                    </Fade>
                 </Col>
                 <Col
                 xs={12}
@@ -182,7 +201,7 @@ const Hypnobirthing = () => {
                 />
                 </Col>
             </Row>
-
+            
             <Row className="section-hypnobirthAbout">
                 <Col
                 sm={12}
@@ -190,9 +209,11 @@ const Hypnobirthing = () => {
                 lg={12}
                 className="subscriptionContents-title-wrapper"
                 >
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">ヒプノバーシングについて</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
@@ -201,15 +222,17 @@ const Hypnobirthing = () => {
                 xl={{ span: 6, offset: 3 }}
                 className="meditationQuestion-list"
                 >
+                    <Fade bottom>
                     <p className="hypnobirthAbout-explanation">
                     {renderRichText(
                         data.allContentfulHypnobirthing.nodes[0].about,
                         options
                     )}
                     </p>
+                    </Fade>
                 </Col>
             </Row>
-
+            
             <Row className="section-hypnobirthMerits">
                 <Col
                 sm={12}
@@ -217,9 +240,11 @@ const Hypnobirthing = () => {
                 lg={12}
                 className="subscriptionContents-title-wrapper"
                 >
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">ヒプノバーシングのメリット</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
@@ -228,6 +253,7 @@ const Hypnobirthing = () => {
                 xl={{ span: 4, offset: 4 }}
                 className="meditationQuestion-list"
                 >
+                    <Fade bottom>
                     <Bullet text="会陰切開やその他の医療介入の必要性が少なくなる"/>
                     <Bullet text="お産における痛みが減る"/>
                     <Bullet text="お産にかかる時間を短くする"/>
@@ -236,6 +262,7 @@ const Hypnobirthing = () => {
                     <Bullet text="お産において骨盤底筋群もダメージを受けにくくなる"/>
                     <Bullet text="パートナーとの絆が深まる"/>
                     <Bullet text="産後の回復がスムーズ"/>
+                    </Fade>
                 </Col>
             </Row>
 
@@ -246,9 +273,11 @@ const Hypnobirthing = () => {
                 lg={12}
                 className="subscriptionContents-title-wrapper"
                 >
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">ヒプノバーシングのクラス内容</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
@@ -257,81 +286,29 @@ const Hypnobirthing = () => {
                 xl={{ span: 6, offset: 3 }}
                 className="meditationQuestion-list"
                 >
+                    <Fade bottom>
                     <p className="hypnobirthContent-text">
                     ５日間を通してお産当日に心と身体を深いリラックスへ導けるようになるための実践的なテクニックを
                     お伝えして練習を繰り返していきます。そうして身体・意識・感情・心の準備をしていくのがこの5日間のプログラムです。
                     </p>
+                    </Fade>
                 </Col>
-                <Col
-                sm={12}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 6, offset: 3 }}
-                className="subscriptionContent-wrapper"
-                >
-                    <HypnobirthContent
-                        title="心地いいお産への心の土台作り"
-                        bullets={contentBullet1}
-                        index={0}
-                        key={0}
-                    />
-                </Col>
-                <Col
-                sm={12}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 6, offset: 3 }}
-                className="subscriptionContent-wrapper"
-                >
-                    <HypnobirthContent
-                        title="赤ちゃんと恋に落ちよう"
-                        bullets={contentBullet2}
-                        index={1}
-                        key={1}
-                    />
-                </Col>
-                <Col
-                sm={12}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 6, offset: 3 }}
-                className="subscriptionContent-wrapper"
-                >
-                    <HypnobirthContent
-                        title="赤ちゃんと共により深いリラクゼーションへ"
-                        bullets={contentBullet3}
-                        index={2}
-                        key={2}
-                    />
-                </Col>
-                <Col
-                sm={12}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 6, offset: 3 }}
-                className="subscriptionContent-wrapper"
-                >
-                    <HypnobirthContent
-                        title="お産の流れを知ろう"
-                        bullets={contentBullet4}
-                        index={3}
-                        key={3}
-                    />
-                </Col>
-                <Col
-                sm={12}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 6, offset: 3 }}
-                className="subscriptionContent-wrapper"
-                >
-                    <HypnobirthContent
-                        title="赤ちゃんの誕生と絆を深めるとき"
-                        bullets={contentBullet5}
-                        index={4}
-                        key={4}
-                    />
-                </Col>            
+                {contentTitle.map((title, index) => (
+                    <Col
+                    sm={12}
+                    md={{ span: 8, offset: 2 }}
+                    lg={{ span: 8, offset: 2 }}
+                    xl={{ span: 6, offset: 3 }}
+                    className="subscriptionContent-wrapper"
+                    >   
+                        <HypnobirthContent
+                            title={title}
+                            bullets={contentBullet[index]}
+                            index={index}
+                            key={index}
+                        />
+                    </Col>
+                ))}          
             </Row>
 
             <Row className="section-hypnobirthDetails">
@@ -341,9 +318,11 @@ const Hypnobirthing = () => {
                 lg={12}
                 className="subscriptionContents-title-wrapper"
                 >
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">開催日時</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 8, offset: 2 }}
@@ -351,6 +330,7 @@ const Hypnobirthing = () => {
                 lg={{ span: 6, offset: 3 }}
                 xl={{ span: 6, offset: 3 }}
                 >
+                    <Fade bottom>
                     <div className="hypnobirthDetails-item">
                         <p className="hypnobirthDetails-title">{data.allContentfulHypnobirthing.nodes[0].dates[0].title}</p>
                         {data.allContentfulHypnobirthing.nodes[0].dates[0].dates.map((date,index) => (
@@ -364,6 +344,7 @@ const Hypnobirthing = () => {
                             options
                         )}
                     </div>
+                    </Fade>
                 </Col>
             </Row>
 
@@ -374,6 +355,7 @@ const Hypnobirthing = () => {
                 lg={12}
                 className="meditationCta-wrapper"
                 >
+                    <Fade bottom>
                     <a
                         href={data.allContentfulHypnobirthing.nodes[0].link}
                         className="btn-subscription large"
@@ -382,6 +364,7 @@ const Hypnobirthing = () => {
                     >
                         お申し込みはこちら
                     </a>
+                    </Fade>
                 </Col>
             </Row>
         </Layout>

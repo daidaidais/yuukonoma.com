@@ -7,6 +7,7 @@ import Bullet from "../components/Bullet";
 import { useStaticQuery, graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import Fade from 'react-reveal/Fade';
 
 const Meditation = () => {
     const data = useStaticQuery(graphql`
@@ -86,6 +87,7 @@ const Meditation = () => {
                         <br />
                         養成講座
                     </p>
+                    <Fade bottom>
                     <a
                         href={data.allContentfulMeditation.nodes[0].link}
                         className="btn-subscription"
@@ -94,6 +96,7 @@ const Meditation = () => {
                     >
                         お申し込みはこちら
                     </a>
+                    </Fade>
                 </Col>
                 <Col
                 xs={12}
@@ -119,10 +122,12 @@ const Meditation = () => {
                 md={12}
                 lg={12}
                 className="subscriptionContents-title-wrapper"
-                >
+                >   
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">こんなお悩みありませんか？</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
@@ -130,6 +135,7 @@ const Meditation = () => {
                 lg={{ span: 6, offset: 3 }}
                 className="meditationQuestion-list"
                 >
+                    <Fade bottom>
                     <Bullet text="他人軸な自分にはもうさよならして、自分の人生を自分の手に取り戻したい" />
                     <Bullet text="常にできない理由やらない理由を探すのではなく、より良くなるにはどうしたら良いかの思考法にシフトしたい" />
                     <Bullet text="不安や不足感からではなく、わくわくや希望や感謝から日常の全てを選択をしたい" />
@@ -139,12 +145,14 @@ const Meditation = () => {
                     <Bullet text="何が起きても自分を立て直せる力(レジリエンス力)が欲しい" />
                     <Bullet text="瞑想のスキルをただ学ぶだけではなくて自分の内面から深く整えたい" />
                     <Bullet text="その先で大切な人にも瞑想を伝えていきたい" />
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 10, offset: 1 }}
                 lg={{ span: 6, offset: 3}}
                 >
+                    <Fade bottom>
                     <StaticImage
                     src="../images/meditation1.jpg"
                     alt="meditation1.jpg"
@@ -152,6 +160,7 @@ const Meditation = () => {
                     loading="eager"
                     placeholder="blurred"
                 />
+                    </Fade>
                 </Col>
             </Row>
 
@@ -162,9 +171,11 @@ const Meditation = () => {
                 lg={12}
                 className="subscriptionContents-title-wrapper"
                 >
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">この講座を通じて行うこと</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
@@ -172,6 +183,7 @@ const Meditation = () => {
                 lg={{ span: 6, offset: 3 }}
                 className="meditationQuestion-list"
                 >
+                    <Fade bottom>
                     <p className="meditationAbout-title">
                         瞑想×仏教×呼吸×コーチング
                     </p>
@@ -196,12 +208,14 @@ const Meditation = () => {
                         まず自分が何を持っているのか何を手放したいと思っているのか何がこの苦しさの根源なのかに気づかないと手放すことすらできません。
                         コーチングはその根源を探った上で手放すまでをサポートしていきます。
                     </p>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 10, offset: 1 }}
                 lg={{ span: 6, offset: 3}}
                 >
+                    <Fade bottom>
                     <StaticImage
                     src="../images/meditation2.jpg"
                     alt="meditation2.jpg"
@@ -209,6 +223,7 @@ const Meditation = () => {
                     loading="eager"
                     placeholder="blurred"
                 />
+                    </Fade>
                 </Col>
             </Row>
 
@@ -219,9 +234,11 @@ const Meditation = () => {
                 lg={12}
                 className="subscriptionContents-title-wrapper"
                 >
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">講座カリキュラム</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
@@ -229,6 +246,7 @@ const Meditation = () => {
                 lg={{ span: 8, offset: 2 }}
                 xl={{ span: 6, offset: 3 }}
                 >
+                    <Fade bottom>
                     <div className="meditationCurriculum-item">
                         <p className="meditationCurriculum-title">瞑想指導者養成講座2ヶ月講座<br />(修了書発行あり)</p>
                     </div>
@@ -237,12 +255,14 @@ const Meditation = () => {
                         <p className="meditationCurriculum-title dotted">月2回のコーチング(全6回)</p>
                         <p className="meditationCurriculum-note">※こちらはコーチングありの講座お申し込みの方に限ります。</p>
                     </div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 10, offset: 1 }}
                 lg={{ span: 6, offset: 3}}
                 >
+                    <Fade bottom>
                     <StaticImage
                     src="../images/meditation3.jpg"
                     alt="meditation3.jpg"
@@ -250,6 +270,7 @@ const Meditation = () => {
                     loading="eager"
                     placeholder="blurred"
                 />
+                    </Fade>
                 </Col>
             </Row>
 
@@ -260,9 +281,11 @@ const Meditation = () => {
                 lg={12}
                 className="subscriptionContents-title-wrapper"
                 >
+                    <Fade bottom>
                     <div className="subscriptionContents-title-line"></div>
                     <p className="subscriptionContents-title">参加費用</p>
                     <div className="subscriptionContents-title-line"></div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={{ span: 10, offset: 1 }}
@@ -270,20 +293,22 @@ const Meditation = () => {
                 lg={{ span: 8, offset: 2 }}
                 xl={{ span: 8, offset: 4 }}
                 xxl={{ span: 4, offset: 4 }}
-                >   
+                > 
                 {data.allContentfulMeditation.nodes[0].dates.map((date,index) => (
-                    <div className="meditationFee-item">
-                    <p className="meditationFee-number">{index+1}</p>
-                    <div className="meditationFee-wrapper">
-                        <p className="meditationFee-title">{date.title}</p>
-                        <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>{date.fee}</span></p>
-                        {/* <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">26万円(税込)</span></p> */}
-                        {renderRichText(
-                            date.dates,
-                            options
-                        )}
-                    </div>
-                </div>
+                    <Fade bottom>
+                        <div className="meditationFee-item">
+                            <p className="meditationFee-number">{index+1}</p>
+                            <div className="meditationFee-wrapper">
+                                <p className="meditationFee-title">{date.title}</p>
+                                <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>{date.fee}</span></p>
+                                {/* <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">26万円(税込)</span></p> */}
+                                {renderRichText(
+                                    date.dates,
+                                    options
+                                )}
+                            </div>
+                        </div>
+                    </Fade>
                 ))}
                 </Col>
             </Row>
@@ -295,6 +320,7 @@ const Meditation = () => {
                 lg={12}
                 className="meditationCta-wrapper"
                 >
+                    <Fade bottom>
                     <a
                         href={data.allContentfulMeditation.nodes[0].link}
                         className="btn-subscription large"
@@ -303,6 +329,7 @@ const Meditation = () => {
                     >
                         お申し込みはこちら
                     </a>
+                    </Fade>
                 </Col>
             </Row>
 
@@ -313,6 +340,7 @@ const Meditation = () => {
                 lg={12}
                 className="meditationCta-wrapper"
                 >
+                    <Fade bottom>
                     <p className="meditationTrial-title">無料個別面談をご希望の方</p>
                     <p className="meditationTrial-text">こちらより、『個人面談希望』とご連絡くださいませ ✿</p>
                     <a
@@ -323,6 +351,7 @@ const Meditation = () => {
                     >
                         無料個別面談はこちら
                     </a>
+                    </Fade>
                 </Col>
             </Row>
         </Layout>
