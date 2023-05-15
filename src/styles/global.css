@@ -741,6 +741,15 @@ Meditation
   margin:0;
 }
 
+.meditationCurriculum-list{
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.meditationCurriculum-list li{
+  margin-top: 10px;
+}
+
 .section-meditationCta{
   background-color: #ffaa7b;
   padding:150px 0;
