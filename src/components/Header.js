@@ -41,7 +41,7 @@ const Header = () => {
               className="my-nav-link"
               activeClassName="nav-link-active"
             >
-              HYPNOBIRTHING
+              お産講座
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">

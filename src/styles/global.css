@@ -931,6 +931,7 @@ Hypnobirthing
 }
 
 .hypnobirthDetails-item{
+  width: 85%;
   margin-bottom: 30px;
 }
 
@@ -951,14 +952,22 @@ Hypnobirthing
   font-size: 20px;
   font-weight:bold;
   margin-right: 20px;
+  color:#FFAA7B;
 }
 
 .hypnobirthDetails-date-right{
   font-size: 20px;
 }
 
-.hypnobirthDetails-notes{
+.hypnobirthDetails-notes-heading{
+  margin-bottom:0;
+  font-weight: bold;
   margin-top: 40px;
+}
+
+.hypnobirthDetails-notes{
+  margin-top: 0px;
+  margin-bottom: 40px;
 }
 
 .hypnobirthDetails-notes li{
@@ -968,6 +977,20 @@ Hypnobirthing
 .section-hypnobirthCta{
   background-color: #FFF4CB;
   padding: 0 0 80px;
+}
+
+.hypnobirthDetails-explanation{
+  font-size: 1.2rem;
+}
+
+.hypnobirthDetails-explanation-bullets{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.hypnobirthDetails-explanation-bullets li{
+  margin: 6px 0;
 }
 
 /****************************
@@ -1664,6 +1687,8 @@ Responsive
 
   .hypnobirthDetails-item{
     margin-left: 10px;
+    margin-bottom: 60px;
+    width: 100%;
   }
 }
 
@@ -1976,6 +2001,11 @@ Responsive
     width:60%;
     margin: 2rem 0;
   }
+  
+  .hypnobirthDetails-item{
+    margin-bottom: 100px;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2242,6 +2272,10 @@ Responsive
     width:150px;
     padding:0;
   }
+  .hypnobirthDetails-item{
+    width: 100%;
+    margin-bottom: 100px;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -2259,5 +2293,8 @@ Responsive
   }
   .meditationCurriculum-title{
     font-size:1.5rem;
+  }
+  .hypnobirthDetails-item{
+    margin-bottom: 100px;
   }
 }
