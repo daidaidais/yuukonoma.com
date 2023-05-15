@@ -300,7 +300,7 @@ const Meditation = () => {
                             <p className="meditationFee-number">{index+1}</p>
                             <div className="meditationFee-wrapper">
                                 <p className="meditationFee-title">{date.title}</p>
-                                <p className="meditationFee-explanation">通常価格：<span style={{fontWeight:"bold"}}>{date.fee}</span></p>
+                                <p className="meditationFee-explanation">通常価格：<span className="highlight-navy">{date.fee}</span></p>
                                 {/* <p className="meditationFee-explanation">3/21までの早割価格：<span className="highlight-navy">26万円(税込)</span></p> */}
                                 {renderRichText(
                                     date.dates,
