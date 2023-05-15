@@ -195,7 +195,7 @@ const Hypnobirthing = () => {
                     </p>
                     <Fade bottom>
                     <a
-                        href={data.allContentfulHypnobirthing.nodes[0].link}
+                        href={data.allContentfulHypnobirthing.nodes[0].dates[0].link}
                         className="btn-subscription block"
                         target="_blank"
                         rel="noreferrer"
