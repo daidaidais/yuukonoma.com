@@ -1488,11 +1488,19 @@ Responsive
     position: relative;
     height:95vh;
   }
+
+  .meditationHero-title{
+    padding-top:20px;
+    font-size:48px;
+    line-height: 80px;
+    font-weight:bold;
+    margin-bottom: 20px;
+  }
   
   .meditationHero-image-wrapper{
     position: absolute;
     top:30%;
-    right:-50%;
+    right:-30%;
   }
 
   .bullet-text{
@@ -1527,7 +1535,13 @@ Responsive
   }
 
   .meditationFee-explanation{
-    font-size: 1rem;;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .meditationCurriculum-list{
+    font-size: 1rem;
   }
 
   .large{
@@ -1638,7 +1652,7 @@ Responsive
 
   .section-hypnobirthHero{
     position: relative;
-    padding: 150px 0 150px;
+    padding: 150px 60px 150px 0;
   }
 
   .hypnobirthHero-title{
@@ -1696,7 +1710,7 @@ Responsive
 
   .hypnobirthDetails-item{
     margin-left: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     width: 100%;
   }
 }
