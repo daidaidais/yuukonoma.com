@@ -19,6 +19,7 @@ const Schedule = (props, { children }) => {
               raw
             }
             link
+            linkText
             id
             image {
               file {
@@ -44,7 +45,7 @@ const Schedule = (props, { children }) => {
         </div>
       </Col>
       {data.allContentfulSchedule.nodes[0].lessons.map(
-        ({ id, title, time, explanation, fee, link, image, isOnline }) => (
+        ({ id, title, time, explanation, fee, link, linkText, image, isOnline }) => (
           <Lesson
             key={id}
             title={title}
@@ -53,6 +54,7 @@ const Schedule = (props, { children }) => {
             fee={fee}
             image={image}
             link={link}
+            linkText={linkText}
             isOnline={isOnline}
           />
         )

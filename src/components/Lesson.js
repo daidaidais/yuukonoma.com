@@ -19,6 +19,11 @@ const Lesson = (props) => {
         <InlineLink link={data.uri}>{children}</InlineLink>
       ),
     },
+    renderText: text => {
+      return text.split('\n').reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment];
+      }, []);
+    },
   };
 
   return (
@@ -48,7 +53,7 @@ const Lesson = (props) => {
           {props.fee &&
             renderRichText(props.fee, options)[0].props.children[0] !== " " && (
               <p className="class-fee">
-                FEE: {renderRichText(props.fee, options)}
+                <span style={{fontWeight: "bold"}}>FEE: </span>{renderRichText(props.fee, options)}
               </p>
             )}
         </Col>
@@ -66,7 +71,7 @@ const Lesson = (props) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                申し込む
+                {props.linkText ? props.linkText : `申し込む`}
               </a>
             </div>
           )}
