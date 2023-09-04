@@ -33,7 +33,7 @@ const Header = () => {
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
-            <AniLink
+            {/* <AniLink
               cover
               direction="right"
               bg={coverGradient}
@@ -42,7 +42,15 @@ const Header = () => {
               activeClassName="nav-link-active"
             >
               お産講座
-            </AniLink>
+            </AniLink> */}
+            <a
+              className="my-nav-link"
+              href="https://osandojo.my.canva.site"
+              target="_blank"
+              rel="noreferrer"
+            >
+              お産道場
+            </a>
           </Nav.Item>
           <Nav.Item as="li">
           <AniLink
