@@ -6,11 +6,15 @@ const Bullet = (props) => {
 
   let pointClass = "bullet-point";
   if(props.color==="yellow") pointClass = "bullet-point yellow";
+  else if(props.color==="navy") pointClass = "bullet-point  navy";
+
+  let textClass = "bullet-text";
+  if(props.textColor==="white") textClass = "bullet-text text-white";
 
   return (
     <div className="bullet-wrapper" ref={wrapperRef}>
       <div className={pointClass}></div>
-      <p className="bullet-text">{props.text}</p>
+      <p className={textClass}>{props.text}</p>
     </div>
   );
 };

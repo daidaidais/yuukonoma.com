@@ -7,6 +7,15 @@
   src: url(/fonts/NotoSansJP-Regular.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url(/fonts/NotoSerifJP-Regular.ttf) format("truetype");
+}
+
 /****************************
 General
 ****************************/
@@ -837,6 +846,10 @@ Bullet
   background-color: #FFE7CB;
 }
 
+.navy{
+  background-color: #000852;
+}
+
 .bullet-text{
   margin:0 10px;
   font-size: 18px;
@@ -999,6 +1012,503 @@ Hypnobirthing
 
 .hypnobirthDetails-explanation-bullets li{
   margin: 6px 0;
+}
+
+/****************************
+Osan Dojo
+****************************/
+.section-osandojoHero{
+  position: relative;
+  background: linear-gradient(180deg, #FFF 90%, #FFE7CB 100%);
+  height:100vh;
+  min-height: 1400px;
+}
+
+.osandojoHero-title-wrapper{
+  position:absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.osandojoHero-subtitle{
+  color: #001652;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.osandojoHero-title{
+  font-family: 'Noto Serif JP';
+  color: #001652;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.osandojoHero-circle{
+  position:absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width:850px;
+}
+
+.osandojoHero-blob-blue{
+  position: absolute;
+  bottom: 0;
+  left:-200px;
+  width: 450px;
+}
+
+.osandojoHero-blob-orange{
+  position: absolute;
+  top:-200px;
+  left:150px;
+  width: 350px;
+}
+
+.osandojoHero-blob-yellow{
+  position: absolute;
+  top: 30%;
+  right:-150px;
+  width: 350px;
+}
+
+.osandojoHero-pill-wrapper{
+  position:absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.osandojoHero-pill{
+  font-size: 1.2rem;
+  font-weight:bold;
+  color:white;
+  background-color: #001652;
+  padding: 4px 20px;
+  border-radius: 6px;
+}
+
+.section-osandojoVision{
+  background-color: #FFE7CB;
+  text-align: center;
+  padding: 60px 0 80px;
+}
+
+.osandojoVision-title{
+  font-family: 'Noto Serif JP';
+  color: #001652;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.osandojoVision-text{
+  color: #001652;
+  font-size: 1rem;
+  margin-bottom: 60px;
+}
+
+.section-osandojoMessage{
+  background-color: #FFE7CB;
+  padding: 60px 0 80px;
+  height: 900px;
+}
+
+.osandojoMessage-photo-wrapper{
+  padding:20px 0 0 20px;
+  position: relative;
+  z-index: 3;
+  background-image: url("../images/osandojo-grayscale.jpg");
+  background-repeat: no-repeat;
+}
+
+.osandojoMessage-text{
+  position: relative;
+  font-family: 'Noto Serif JP';
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline;
+  background-color: white;
+  white-space: pre;
+}
+
+.osandojoMessage-circle-wrapper{
+  position: relative;
+  left: -20%;
+}
+
+.osandojoMessage-circle-orange{
+  position: absolute;
+  width:700px;
+  top: -100px;
+  left: -100px;
+}
+
+.osandojoMessage-circle-green{
+  position: absolute;
+  width:700px;
+}
+
+.section-osandojoPain{
+  background-color: #FFE7CB;
+  padding: 80px 0;
+}
+
+.osanDojoPain-wrapper{
+  background-color: #000852;
+  padding:80px 0;
+  border-radius: 20px;
+  border: 4px solid white; 
+  position: relative;
+  overflow: hidden;
+}
+
+.text-white{
+  color:white;
+}
+
+.line-white{
+  background-color: white;
+}
+
+.osandojoPain-bullets-wrapper{
+  margin-left: 20%;
+}
+
+.osandojoPain-cutout{
+  width: 48px;
+  position: absolute;
+  bottom: -4px;
+  right: 20px;
+}
+
+.osandojoPain-blob{
+  width: 250px;
+  position: absolute;
+  bottom: 30px;
+  left: -120px;
+}
+
+.section-osandojoAbout{
+  background: linear-gradient(180deg, #FFE7CB 0%, #FFF4CB 15%, #FFF4CB 100%);
+  padding: 80px 0;
+  position: relative;
+}
+
+.osandojoAbout-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.osandojoAbout-title-wrapper{
+  position: relative;
+  text-align: center;
+  z-index: 3;
+  margin-bottom: 80px;
+}
+
+.osandojoAbout-title{
+  font-family: 'Noto Serif JP';
+  color: #001652;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.osandojoAbout-subtitle{
+  color: #001652;
+  font-size: 1rem;
+  width: 60%;
+  margin: 40px auto 0;
+}
+
+.osandojoAbout-blur{
+  position: absolute;
+  width: 900px;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.osandojoAbout-bullets-wrapper{
+  text-align: left;
+}
+
+.osandojoAbout-cutout{
+  position: absolute;
+  bottom:0;
+  left: 20px;
+  width: 50px;
+}
+
+.osandojoAbout-curve{
+  position: absolute;
+  transform: rotate(-36deg);
+  bottom:-300px;
+  right: -240px;
+  width: 450px;
+  z-index: 3;
+}
+
+.section-osandojoFeatures{
+  background-color: #FFE7CB;
+  padding: 80px 0;
+  position: relative;
+}
+
+.osandojoFeatures-text{
+  padding: 20px 60px 20px 0;
+  margin-top: 50px;
+  font-size:1.4rem;
+  font-weight: 400;
+}
+
+.osandojoFeatures-diagram{
+  padding-left: 60px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.osandojoFeatures-circle{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: 12px solid white;
+}
+
+.osandojoFeatures-diagram-green-wrapper{
+  position: absolute;
+  text-align: center;
+  width: 450px;
+  top:-350px;
+  left:0;
+}
+
+.osandojoFeatures-diagram-orange-wrapper{
+  position: absolute;
+  text-align: center;
+  width: 350px;
+  top:50px;
+  right:-200px;
+}
+
+
+.osandojoFeatures-diagram-purple-wrapper{
+  position: absolute;
+  text-align: center;
+  width: 400px;
+  bottom:-200px;
+  left:-200px;
+}
+
+.osandojoFeatures-diagram-text{
+  position: absolute;
+  color:white;
+  font-size: 1.2rem;
+  font-weight:600;
+  z-index: 3;
+  left: 45%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.osandojoFeatures-diagram-orange{
+  
+}
+
+.osandojoFeatures-diagram-green{
+  
+}
+
+.osandojoFeatures-diagram-purple{
+  
+}
+
+.osandojoFeature-left{
+  text-align: center;
+  position: relative;
+}
+
+.osandojoFeature-left-title{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.osandojoFeature-left-blob{
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.osandojoFeature-right{
+  margin-bottom: 200px;
+}
+
+.osandojoFeature-right-title{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color:#000852;
+  margin-bottom: 40px;
+}
+
+.osandojoFeature-right-text{
+  font-size: 1rem;
+  color:#000852;
+  margin-bottom: 40px;
+}
+
+.osandojoFeature-right-merits-wrapper{
+  margin-bottom: 40px;
+}
+
+.osandojoFeature-right-merits-title{
+  font-size: 1rem;
+  color:#000852;
+  font-weight: 600;
+}
+
+.blob-purple{
+  width: 600px;
+  left: 52%;
+  top: 55%;
+}
+
+.blob-orange{
+  width: 550px;
+  left: 52%;
+  top: 55%;
+}
+
+.btn-hypnobirthing {
+  display: inline-block;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 20px;
+  background-color: #ffffff;
+  color: #000852;
+  border-radius: 20px;
+  font-weight: bold;
+  position: relative;
+  z-index:3;
+}
+
+.btn-hypnobirthing:hover {
+  color: #ffffff;
+  background-color: #000852;
+  text-decoration: none;
+}
+.btn-hypnobirthing:active {
+  color: #ffffff;
+  background-color: #000852;
+  text-decoration: none;
+}
+
+.osandojoFeatures-cutout{
+  position: absolute;
+  width: 100px;
+  bottom:0;
+  left: 20px;
+}
+
+.section-osandojoSchedule{
+  background-color: #FFF4CB;
+  padding: 80px 0;
+}
+
+.osandojoSchedule-left{
+  margin-bottom: 100px;
+}
+
+.osandojoSchedule-block-wrapper{
+  margin-bottom: 60px;
+}
+
+.osandojoSchedule-block-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.osandojoSchedule-block-text-wrapper{
+  margin-bottom: 10px;
+}
+
+.osandojoSchedule-block-text{
+  font-size: 1rem;
+}
+
+.bold{
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.small{
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.osandojoSchedule-right{
+  position: relative;
+}
+
+.osandojoSchedule-cutout-wrapper{
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.osandojoSchedule-cutout-front{
+  position: absolute;
+  width: 400px;
+  z-index: 3;
+}
+
+.osandojoSchedule-cutout-back{
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 400px;
+  z-index: 1;
+}
+
+.osandojoSchedule-blob-orange{
+  width: 500px;
+  position: absolute;
+  top: 150px;
+  left: 300px;
+}
+
+.osandojoSchedule-blob-blue{
+  width: 500px;
+  position: absolute;
+  top: -150px;
+  left: 50px;
+}
+
+.osandojoSchedule-blob-purple{
+  width: 500px;
+  position: absolute;
+  top: 300px;
+  left: -100px;
+}
+
+.osandojo{
+  font-size: 1.2rem;
 }
 
 /****************************
@@ -1370,7 +1880,7 @@ Responsive
     animation: animateHeroTitleFill 0s;
   }
   .hero-subtitle {
-    color: white;
+    color: 1;
     background-color: #000852;
     display: inline-block;
   }
@@ -1712,6 +2222,200 @@ Responsive
     margin-bottom: 100px;
     width: 100%;
   }
+
+  .section-osandojoHero{
+    min-height: 110vh;
+  }
+  
+  .osandojoHero-title-wrapper{
+    top: 45%;
+    left: 50%;
+    width: 100%;
+  }
+  
+  .osandojoHero-subtitle{
+    font-size: 1rem;
+  }
+  
+  .osandojoHero-title{
+    font-size: 4rem;
+  }
+  
+  .osandojoHero-circle{
+    top: -70px;
+    left: 50%;
+    width:650px;
+  }
+
+  .osandojoHero-pill-wrapper{
+    bottom: 14%;
+    width: 80%;
+    justify-content: center;
+    gap:10px;
+    flex-wrap: wrap;
+  }
+  .osandojoHero-pill{
+    font-size: 1rem;
+    padding: 4px 10px;
+    width: 120px;
+    text-align: center;
+  }
+  .osandojoHero-blob-blue{
+    bottom: -250px;
+    left:-200px;
+  }
+  
+  .osandojoHero-blob-orange{
+    top:-200px;
+    left:-100px;
+  }
+  
+  .osandojoHero-blob-yellow{
+    top: 500px;
+    right:-200px;
+  }
+  .section-osandojoVision{
+    padding-top: 120px;
+  }
+  .osandojoVision-title{
+    font-size: 2rem;
+  }
+  .section-osandojoMessage{
+    padding-bottom: 0;
+  }
+  .osandojoMessage-photo-wrapper{
+    background-position: 60% 0;
+    width: 90%;
+  }
+  
+  .osandojoMessage-text{
+    position: relative;
+    font-family: 'Noto Serif JP';
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline;
+    background-color: white;
+    white-space: normal;
+  }
+
+  .osandojoMessage-circle-green{
+    width: 400px;
+    top: -400px;
+    right: -200px;
+  }
+
+  .osandojoMessage-circle-orange{
+    width: 400px;
+    top: -700px;
+    right: -500px;
+  } 
+
+  .section-osandojoPain{
+    padding-top: 0;
+  }
+
+  .osandojoPain-bullets-wrapper{
+    position: relative;
+    margin-left: 8%;
+    z-index: 3;
+  }
+
+  .osandojoPain-cutout{
+    right: 0;
+  }
+
+  .osandojoAbout-title{
+   font-size: 1.5rem; 
+  }
+  .osandojoAbout-curve{
+    width: 400px;
+  }
+  .osandojoFeatures-text{
+    padding: 0;
+    font-size: 1.2rem;
+    margin-bottom: 80px;
+  }
+  .section-osandojoAbout{
+    padding-bottom: 200px;
+  }
+  .osandojoAbout-blur{
+    width: 1000px;
+    top: 120px;
+  }
+  .osandojoAbout-subtitle{
+    width: 100%;
+  }  
+
+  .osandojoFeatures-diagram{
+    padding-left: 0;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+  .osandojoFeatures-diagram-text {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .osandojoFeatures-diagram-purple-wrapper{
+    width: 350px;
+    left:-150px;
+  }
+ .osandojoFeatures-diagram-green-wrapper{
+    width: 400px;
+    left: -50px;
+    top: -350px;
+  }
+  .osandojoFeatures-diagram-orange-wrapper{
+    width: 300px;
+    top: -50px;
+    right: -180px;
+  }
+
+  .osandojoFeatures-circle{
+    height: 300px;
+    width: 300px;
+  }
+
+  .osandojoFeatures-circle{
+    margin: auto;
+  }
+  .osandojoFeature-left{
+    height: 500px;
+  }
+  .osandojoFeature-left-title{
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  
+  .osandojoFeature-left-blob{
+    width: 600px;
+  }
+  .osandojoFeature-right{
+    margin-bottom: 100px;
+  }
+  .osandojoFeature-right-title{
+    font-size: 1.4rem;
+  }
+  .blob-purple{
+    width: 500px;
+    left: 52%;
+    top: 55%;
+  }
+  
+  .blob-orange{
+    width: 450px;
+    left: 52%;
+    top: 55%;
+  }
+  .section-osandojoSchedule{
+    overflow: hidden;
+  }
+  .osandojoSchedule-right{
+    display: none;
+  }
+  .osandojo{
+    font-size: 1rem;
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -2030,6 +2734,76 @@ Responsive
     margin-bottom: 100px;
     width: 100%;
   }
+
+  .osandojoHero-pill-wrapper{
+    bottom: 15%;
+    width: 80%;
+  }
+  .osandojoHero-pill{
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+  .osandojoHero-blob-blue{
+    bottom: -100px;
+    left:-200px;
+  }
+  
+  .osandojoHero-blob-orange{
+    top:-200px;
+    left:-100px;
+  }
+  
+  .osandojoHero-blob-yellow{
+    top: -50px;
+    right:-200px;
+  }
+  .osandojoVision-title{
+    font-size: 2rem;
+  }
+  .osandojoMessage-photo-wrapper{
+    background-position: 60% 0;
+  }
+  
+  .osandojoMessage-text{
+    white-space: normal;
+  }
+  .osandojoAbout-title{
+   font-size: 1.5rem; 
+  }
+  .osandojoFeatures-text{
+    padding: 0;
+    font-size: 1.2rem;
+    margin-bottom: 80px;
+  }
+  .osandojoAbout-blur{
+    width: 1000px;
+    top: 140px;
+  }
+  .osandojoAbout-subtitle{
+    width: 100%;
+  }  
+  .osandojoFeatures-circle{
+    margin: auto;
+  }
+  .osandojoFeature-left{
+    height: 500px;
+  }
+  .osandojoFeature-right{
+    margin-bottom: 100px;
+  }
+  .osandojoFeature-right-title{
+    font-size: 1.5rem;
+  }
+  .section-osandojoSchedule{
+    overflow: hidden;
+  }
+  .osandojoSchedule-right{
+    display: none;
+  }
+  .osandojo{
+    font-size: 1.2rem;
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2300,6 +3074,60 @@ Responsive
     width: 100%;
     margin-bottom: 100px;
   }
+  .osandojoHero-pill-wrapper{
+    bottom: 15%;
+    gap: 20px;
+  }
+  .osandojoHero-pill{
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+  .osandojoHero-blob-blue{
+    bottom: 0;
+    left:-200px;
+  }
+  
+  .osandojoHero-blob-orange{
+    top:-200px;
+    left:-50px;
+  }
+  
+  .osandojoHero-blob-yellow{
+    top: 10%;
+    right:-150px;
+  }
+  .osandojoVision-title{
+    font-size: 2.5rem;
+  }
+  .osandojoAbout-blur{
+    width: 1000px;
+    top: 140px;
+  }
+  .osandojoAbout-subtitle{
+    width: 80%;
+  }
+  .osandojoFeatures-text{
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+  }  
+  .osandojoFeatures-circle{
+    margin: auto;
+  }
+  .osandojoFeature-left{
+    height: 500px;
+  }
+  .osandojoFeature-right-title{
+    font-size: 1.5rem;
+  }
+  .section-osandojoSchedule{
+    overflow: hidden;
+  }
+  .osandojoSchedule-right{
+    display: none;
+  }
+  .osandojo{
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -2308,7 +3136,7 @@ Responsive
     width: 80%;
   }
   .subscriptionContents-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 15px auto;
   }
   .subscriptionContents-explanation {
@@ -2320,5 +3148,44 @@ Responsive
   }
   .hypnobirthDetails-item{
     margin-bottom: 100px;
+  }
+  .osandojoFeature-right-title{
+    font-size: 1.5rem;
+  }
+  .osandojoVision-title{
+    font-size: 3.5rem;
+  }
+  .osandojoFeature-left-title{
+    font-size: 1.5rem;
+  }
+  .osandojoFeatures-text{
+    font-size: 1.2rem;
+  }
+  .osandojoHero-pill-wrapper{
+    gap: 30px;
+  }
+  .osandojoHero-pill{
+    font-size: 1rem;
+    padding: 4px 20px;
+  }
+  .osandojoAbout-subtitle{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  /*　Bootstrap xl 　*/
+  .subscriptionContents-title {
+    font-size: 1.5rem;
+  }
+  .osandojoFeature-right-title{
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /*　Bootstrap xxl and above 　*/
+  .subscriptionContents-title {
+    font-size: 2rem;
   }
 }
