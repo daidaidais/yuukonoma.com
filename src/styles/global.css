@@ -7,15 +7,6 @@
   src: url(/fonts/NotoSansJP-Regular.ttf) format("truetype");
 }
 
-@font-face {
-  font-family: 'Noto Serif JP';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url(/fonts/NotoSerifJP-Regular.ttf) format("truetype");
-}
-
 /****************************
 General
 ****************************/
@@ -1021,11 +1012,11 @@ Osan Dojo
   position: relative;
   background: linear-gradient(180deg, #FFF 90%, #FFE7CB 100%);
   height:100vh;
-  min-height: 1400px;
+  min-height: 1200px;
 }
 
 .osandojoHero-title-wrapper{
-  position:absolute;
+  position:absolute !important;
   top: 48%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -1047,36 +1038,36 @@ Osan Dojo
 }
 
 .osandojoHero-circle{
-  position:absolute;
-  top: 0;
+  position:absolute !important;
+  top: -5%;
   left: 50%;
   transform: translateX(-50%);
   width:850px;
 }
 
 .osandojoHero-blob-blue{
-  position: absolute;
+  position: absolute !important;
   bottom: 0;
   left:-200px;
   width: 450px;
 }
 
 .osandojoHero-blob-orange{
-  position: absolute;
+  position: absolute !important;
   top:-200px;
   left:150px;
   width: 350px;
 }
 
 .osandojoHero-blob-yellow{
-  position: absolute;
+  position: absolute !important;
   top: 30%;
   right:-150px;
   width: 350px;
 }
 
 .osandojoHero-pill-wrapper{
-  position:absolute;
+  position:absolute !important;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
@@ -1144,14 +1135,14 @@ Osan Dojo
 }
 
 .osandojoMessage-circle-orange{
-  position: absolute;
+  position: absolute !important;
   width:700px;
   top: -100px;
   left: -100px;
 }
 
 .osandojoMessage-circle-green{
-  position: absolute;
+  position: absolute !important;
   width:700px;
 }
 
@@ -1183,14 +1174,14 @@ Osan Dojo
 
 .osandojoPain-cutout{
   width: 48px;
-  position: absolute;
+  position: absolute !important;
   bottom: -4px;
   right: 20px;
 }
 
 .osandojoPain-blob{
   width: 250px;
-  position: absolute;
+  position: absolute !important;
   bottom: 30px;
   left: -120px;
 }
@@ -1229,7 +1220,7 @@ Osan Dojo
 }
 
 .osandojoAbout-blur{
-  position: absolute;
+  position: absolute !important;
   width: 900px;
   top: 150px;
   left: 50%;
@@ -1242,14 +1233,14 @@ Osan Dojo
 }
 
 .osandojoAbout-cutout{
-  position: absolute;
+  position: absolute !important;
   bottom:0;
   left: 20px;
   width: 50px;
 }
 
 .osandojoAbout-curve{
-  position: absolute;
+  position: absolute !important;
   transform: rotate(-36deg);
   bottom:-300px;
   right: -240px;
@@ -1285,7 +1276,7 @@ Osan Dojo
 }
 
 .osandojoFeatures-diagram-green-wrapper{
-  position: absolute;
+  position: absolute !important;
   text-align: center;
   width: 450px;
   top:-350px;
@@ -1293,7 +1284,7 @@ Osan Dojo
 }
 
 .osandojoFeatures-diagram-orange-wrapper{
-  position: absolute;
+  position: absolute !important;
   text-align: center;
   width: 350px;
   top:50px;
@@ -1302,7 +1293,7 @@ Osan Dojo
 
 
 .osandojoFeatures-diagram-purple-wrapper{
-  position: absolute;
+  position: absolute !important;
   text-align: center;
   width: 400px;
   bottom:-200px;
@@ -1310,7 +1301,7 @@ Osan Dojo
 }
 
 .osandojoFeatures-diagram-text{
-  position: absolute;
+  position: absolute !important;
   color:white;
   font-size: 1.2rem;
   font-weight:600;
@@ -1341,7 +1332,7 @@ Osan Dojo
   font-size: 1.8rem;
   font-weight: 600;
   color: white;
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1350,7 +1341,7 @@ Osan Dojo
 
 .osandojoFeature-left-blob{
   width: 700px;
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   left: 55%;
   transform: translate(-50%, -50%);
@@ -1420,7 +1411,7 @@ Osan Dojo
 }
 
 .osandojoFeatures-cutout{
-  position: absolute;
+  position: absolute !important;
   width: 100px;
   bottom:0;
   left: 20px;
@@ -1467,19 +1458,19 @@ Osan Dojo
 }
 
 .osandojoSchedule-cutout-wrapper{
-  position: absolute;
+  position: absolute !important;
   top: 200px;
   left: 200px;
 }
 
 .osandojoSchedule-cutout-front{
-  position: absolute;
+  position: absolute !important;
   width: 400px;
   z-index: 3;
 }
 
 .osandojoSchedule-cutout-back{
-  position: absolute;
+  position: absolute !important;
   top: 20px;
   left: -20px;
   width: 400px;
@@ -1488,21 +1479,21 @@ Osan Dojo
 
 .osandojoSchedule-blob-orange{
   width: 500px;
-  position: absolute;
+  position: absolute !important;
   top: 150px;
   left: 300px;
 }
 
 .osandojoSchedule-blob-blue{
   width: 500px;
-  position: absolute;
+  position: absolute !important;
   top: -150px;
   left: 50px;
 }
 
 .osandojoSchedule-blob-purple{
   width: 500px;
-  position: absolute;
+  position: absolute !important;
   top: 300px;
   left: -100px;
 }
@@ -2238,11 +2229,12 @@ Responsive
   }
   
   .osandojoHero-title{
-    font-size: 4rem;
+    font-size: 3rem;
+    font-weight: 800;
   }
   
   .osandojoHero-circle{
-    top: -70px;
+    top: -90px;
     left: 50%;
     width:650px;
   }
@@ -2286,15 +2278,12 @@ Responsive
   .osandojoMessage-photo-wrapper{
     background-position: 60% 0;
     width: 90%;
+    padding: 30px 10px;
   }
   
   .osandojoMessage-text{
-    position: relative;
-    font-family: 'Noto Serif JP';
     font-size: 1rem;
     font-weight: 600;
-    display: inline;
-    background-color: white;
     white-space: normal;
   }
 
@@ -2306,7 +2295,7 @@ Responsive
 
   .osandojoMessage-circle-orange{
     width: 400px;
-    top: -700px;
+    top: -800px;
     right: -500px;
   } 
 
@@ -2322,6 +2311,10 @@ Responsive
 
   .osandojoPain-cutout{
     right: 0;
+  }
+
+  .osandojoPain-blob{
+    left: -150px;
   }
 
   .osandojoAbout-title{
@@ -2393,7 +2386,7 @@ Responsive
     margin-bottom: 100px;
   }
   .osandojoFeature-right-title{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .blob-purple{
     width: 500px;
@@ -2737,7 +2730,6 @@ Responsive
 
   .osandojoHero-pill-wrapper{
     bottom: 15%;
-    width: 80%;
   }
   .osandojoHero-pill{
     font-size: 1rem;
