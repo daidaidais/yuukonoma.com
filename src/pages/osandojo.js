@@ -79,7 +79,11 @@ const Osandojo = () => {
 
     return (
         <Layout popIn={popIn}>
-            <SEO title="お産道場" image={ogp_image}/>
+            <SEO
+                title="お産道場"
+                image={ogp_image}
+                description="《すべての女性に自信を与えること》をビジョンに、『お産道場』を開催しております。満足のいくお産を叶え、お産を機になりたいわたしになる。そのために自信を持ってお産に臨み産後より綺麗になるための、知識とテクニックと体力を手に入れる。それがお産道場です。"
+            />
 
             <Row className="section-osandojoHero">
                 <Col
