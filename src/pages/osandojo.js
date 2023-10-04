@@ -525,30 +525,22 @@ const Osandojo = () => {
                         </p>
                         <div className="osandojoSchedule-block-text-wrapper">
                             <span className="osandojoSchedule-block-text bold">第一回</span>
-                            <span className="osandojoSchedule-block-text">心地よいお産への心の土台作り</span>
+                            <span className="osandojoSchedule-block-text">心地よいお産への心の土台作り・赤ちゃんと恋に落ちよう</span>
                         </div>
                         <div className="osandojoSchedule-block-text-wrapper">
                             <span className="osandojoSchedule-block-text bold">第二回</span>
-                            <span className="osandojoSchedule-block-text">赤ちゃんと恋に落ちよう</span>
-                        </div>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第三回</span>
                             <span className="osandojoSchedule-block-text">赤ちゃんと一緒に深いリラクゼーションへ</span>
                         </div>
                         <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第四回</span>
+                            <span className="osandojoSchedule-block-text bold">第三回</span>
                             <span className="osandojoSchedule-block-text">お産の流れを知ろう</span>
                         </div>
                         <div className="osandojoSchedule-block-text-wrapper">
+                            <span className="osandojoSchedule-block-text bold">第四回</span>
+                            <span className="osandojoSchedule-block-text">赤ちゃんと誕生と絆を深めるとき</span>
+                        </div>
+                        <div className="osandojoSchedule-block-text-wrapper">
                             <span className="osandojoSchedule-block-text bold">第五回</span>
-                            <span className="osandojoSchedule-block-text">お産の流れを知ろう２</span>
-                        </div>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第六回</span>
-                            <span className="osandojoSchedule-block-text">赤ちゃんの誕生と絆を深めるとき</span>
-                        </div>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第七回</span>
                             <span className="osandojoSchedule-block-text">全体フォローアップ相談会</span>
                         </div>
                     </div>
