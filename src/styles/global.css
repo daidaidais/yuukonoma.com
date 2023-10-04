@@ -1502,6 +1502,16 @@ Osan Dojo
   font-size: 1.2rem;
 }
 
+.osandojoFee-wrapper{
+  width: 80%;
+  margin-left: 60px;
+}
+
+.osandojoFee-note{
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
 /****************************
 Favourites
 ****************************/
@@ -1822,9 +1832,10 @@ Responsive
     padding: 15% 0;
     text-align: center;
     width: 100vw;
-    height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
+    border: solid 4px #001652;
+    margin-top: 20px;
   }
 
   .nav-item {
@@ -2408,6 +2419,11 @@ Responsive
   .osandojo{
     font-size: 1rem;
     text-align: left;
+    margin-bottom: 10px
+  }
+  .osandojoFee-wrapper{
+    width: 100%;
+    margin-left: 0px;
   }
 }
 
@@ -2437,9 +2453,10 @@ Responsive
     padding: 15% 0;
     text-align: center;
     width: 100vw;
-    height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
+    border: solid 4px #001652;
+    margin-top: 20px;
   }
 
   .nav-item {
@@ -2796,6 +2813,11 @@ Responsive
     font-size: 1.2rem;
     text-align: left;
   }
+  .osandojo{
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 10px
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -2824,9 +2846,10 @@ Responsive
     padding: 5% 0;
     text-align: center;
     width: 100vw;
-    height: 90vh;
     background-color: #ffffff;
     border-radius: 20px;
+    border: solid 4px #001652;
+    margin-top: 20px;
   }
 
   .nav-item {

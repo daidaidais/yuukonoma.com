@@ -26,6 +26,13 @@ const Osandojo = () => {
           }
           link
           vision
+          feeWithCoachingEarlybird
+          feeWithCoachingRegular
+          aboutCoaching {
+            raw
+          }
+          linkTrial
+          linkWithCoaching
         }
       }
   `)
@@ -410,7 +417,7 @@ const Osandojo = () => {
                         to="/hypnobirthing"
                         className="btn-hypnobirthing"
                         >
-                        ヒプノバーシングの詳細はこちら
+                        ヒプノバーシング単体での受講はこちら
                     </AniLink>
                 </Col>
                 <Col
@@ -574,18 +581,60 @@ const Osandojo = () => {
                             <span className="osandojoSchedule-block-text">■産後すぐから取り組んで欲しいこと(産後ヨガと瞑想)</span>
                         </div>
                         <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text small">※動画はVimeoでのお渡しとなります。視聴期限はXXXまで。</span>
+                            <span className="osandojoSchedule-block-text small">※動画はVimeoでのお渡しとなります。</span>
                         </div>
                     </div>
                     <div className="osandojoSchedule-block-wrapper">
                         <p className="osandojoSchedule-block-title">
                             費用
                         </p>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                        <p className="meditationFee-explanation osandojo">通常価格：<span className="bold">{data.contentfulOdandojo.feeRegular}(税込)</span></p>
-                        <p className="meditationFee-explanation osandojo">{data.contentfulOdandojo.earlybirdDeadline}までの早割価格：<span className="highlight-navy">{data.contentfulOdandojo.feeEarlybird}(税込)</span></p>
-                        </div>
+                        {/* <div className="osandojoSchedule-block-text-wrapper">
+                            <p className="meditationFee-explanation osandojo">通常価格：<span className="bold">{data.contentfulOdandojo.feeRegular}(税込)</span></p>
+                            <p className="meditationFee-explanation osandojo">{data.contentfulOdandojo.earlybirdDeadline}までの早割価格：<span className="highlight-navy">{data.contentfulOdandojo.feeEarlybird}(税込)</span></p>
+                        </div> */}
                     </div>
+                    <Fade bottom>
+                        <div className="meditationFee-item">
+                            <p className="meditationFee-number osandojo">1</p>
+                            <div className="osandojoFee-wrapper">
+                                <p className="meditationFee-title">お産道場＋コーチング</p>
+                                <p className="meditationFee-explanation osandojo">通常価格：<span className="bold">{data.contentfulOdandojo.feeWithCoachingRegular}</span></p>
+                                <p className="meditationFee-explanation osandojo">{data.contentfulOdandojo.earlybirdDeadline}までの早割価格：<span className="highlight-navy">{data.contentfulOdandojo.feeWithCoachingEarlybird}</span></p>
+                                <p className="osandojoFee-note">
+                                    {renderRichText(
+                                        data.contentfulOdandojo.aboutCoaching,
+                                        options
+                                    )}
+                                </p>
+                                <a
+                                    href={data.contentfulOdandojo.linkWithCoaching}
+                                    className="btn-subscription"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    お申し込みはこちら
+                                </a>
+                            </div>
+                        </div>
+                    </Fade>
+                    <Fade bottom>
+                        <div className="meditationFee-item">
+                            <p className="meditationFee-number osandojo">2</p>
+                            <div className="osandojoFee-wrapper">
+                                <p className="meditationFee-title">お産道場のみ</p>
+                                <p className="meditationFee-explanation osandojo">通常価格：<span className="bold">{data.contentfulOdandojo.feeRegular}</span></p>
+                                <p className="meditationFee-explanation osandojo">{data.contentfulOdandojo.earlybirdDeadline}までの早割価格：<span className="highlight-navy">{data.contentfulOdandojo.feeEarlybird}</span></p>
+                                <a
+                                    href={data.contentfulOdandojo.link}
+                                    className="btn-subscription"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    お申し込みはこちら
+                                </a>
+                            </div>
+                        </div>
+                    </Fade>
                 </Col>
                 <Col
                 sm={12}
@@ -632,16 +681,28 @@ const Osandojo = () => {
                     placeholder="blurred"
                     />
                 </Col>
-                <Fade bottom>
-                            <a
-                            href={data.contentfulOdandojo.link}
-                            className="btn-subscription large"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            お申し込みはこちら
-                            </a>
+            </Row>
+
+            <Row className="section-meditationTrial">
+                <Col
+                sm={12}
+                md={12}
+                lg={12}
+                className="meditationCta-wrapper"
+                >
+                    <Fade bottom>
+                    <p className="meditationTrial-title">無料相談会実施中</p>
+                    <p className="meditationTrial-text"><b>{data.contentfulOdandojo.earlybirdDeadline}</b>までの相談会へのご参加で早割よりお得な特別価格をご案内中！</p>
+                    <a
+                        href={data.contentfulOdandojo.linkTrial}
+                        className="btn-subscription large trial"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        相談会お申し込みはこちら
+                    </a>
                     </Fade>
+                </Col>
             </Row>
         </Layout>
       );

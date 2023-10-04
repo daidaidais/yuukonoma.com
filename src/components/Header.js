@@ -43,6 +43,16 @@ const Header = () => {
             >
               お産道場
             </AniLink>
+            {/* <AniLink
+              cover
+              direction="right"
+              bg={coverGradient}
+              to="/hypnobirthing"
+              className="my-nav-link"
+              activeClassName="nav-link-active"
+            >
+              HYPNOBIRTHING
+            </AniLink> */}
             {/* <a
               className="my-nav-link"
               href="https://osandojo.my.canva.site"
