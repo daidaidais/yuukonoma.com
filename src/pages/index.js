@@ -32,7 +32,7 @@ const Index = () => {
 
   return (
     <Layout popIn={popIn}>
-      <SEO title="Top" />
+      <SEO title="Yuuko Noma | Top" />
       <Hero />
       <Schedule title={data.contentfulSchedule.title} />
     </Layout>

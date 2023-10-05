@@ -71,7 +71,7 @@ const Profile = () => {
 
   return (
     <Layout popIn={popIn}>
-      <SEO title="Profile" />
+      <SEO title="Yuuko Noma | PROFILE" />
       {data.allContentfulProfile.nodes[0].favourites.map(
         ({ title, explanation, buttonText, link, image }, index) => (
           <Favourites
