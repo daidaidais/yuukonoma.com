@@ -59,7 +59,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
         },
         {
           property: `og:image`,
-          content: `${siteUrl}${image}` || defaultImage,
+          content: image ? `${siteUrl}${image}` : defaultImage,
         },
         {
           name: `twitter:card`,
