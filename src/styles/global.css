@@ -1518,12 +1518,18 @@ Osan Dojo
 
 .osandojoFee-wrapper{
   width: 80%;
-  margin-left: 60px;
+  margin-left: 40px;
 }
 
 .osandojoFee-note{
   margin-top: 20px;
   font-size: 0.9rem;
+}
+
+.osandojoFee-note-heading{
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 6px;
 }
 
 /****************************

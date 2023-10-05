@@ -590,10 +590,11 @@ const Osandojo = () => {
                         <div className="meditationFee-item">
                             <p className="meditationFee-number osandojo">1</p>
                             <div className="osandojoFee-wrapper">
-                                <p className="meditationFee-title">お産道場＋コーチング</p>
+                                <p className="meditationFee-title">お産道場＋産後コーチング</p>
                                 <p className="meditationFee-explanation osandojo">通常価格：<span className="bold">{data.contentfulOdandojo.feeWithCoachingRegular}</span></p>
                                 <p className="meditationFee-explanation osandojo">{data.contentfulOdandojo.earlybirdDeadline}までの早割価格：<span className="highlight-navy">{data.contentfulOdandojo.feeWithCoachingEarlybird}</span></p>
                                 <p className="osandojoFee-note">
+                                    <p className="osandojoFee-note-heading">※産後コーチングとは？</p>
                                     {renderRichText(
                                         data.contentfulOdandojo.aboutCoaching,
                                         options
