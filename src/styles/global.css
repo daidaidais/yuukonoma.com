@@ -1027,6 +1027,7 @@ Osan Dojo
   color: #001652;
   font-size: 1rem;
   text-align: center;
+  letter-spacing: 2px;
   margin: 0;
 }
 
@@ -2264,7 +2265,7 @@ Responsive
     text-align: center;
   }
   .osandojoHero-blob-blue{
-    bottom: -250px;
+    bottom: -300px;
     left:-200px;
   }
   
