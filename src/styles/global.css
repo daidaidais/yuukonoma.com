@@ -1437,14 +1437,27 @@ Osan Dojo
 }
 
 .osandojoSchedule-block-text-wrapper{
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.osandojoSchedule-block-right-wrapper{
+
 }
 
 .osandojoSchedule-block-text{
   font-size: 1rem;
+  margin: 0;
 }
 
-.bold{
+.osandojoSchedule-block-date{
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 6px 0 0;
+}
+
+.osandojoSchedule-block-heading{
   font-weight: 600;
   margin-right: 20px;
 }
@@ -2414,13 +2427,30 @@ Responsive
   .section-osandojoSchedule{
     overflow: hidden;
   }
+  .osandojoSchedule-block-text-wrapper{
+    flex-direction: column;
+  }
+  .osandojoSchedule-block-right-wrapper{
+  
+  }
+  .osandojoSchedule-block-heading{
+    margin: 0 0 10px;
+    background-color: #FFAA7B;
+    color: white;
+    padding-left: 5px;
+  }
+  .osandojoSchedule-block-text{
+  }
+  .osandojoSchedule-block-date{
+    font-size: 1rem;
+  }
   .osandojoSchedule-right{
     display: none;
   }
   .osandojo{
     font-size: 1rem;
     text-align: left;
-    margin-bottom: 10px
+    margin-bottom: 20px
   }
   .osandojoFee-wrapper{
     width: 100%;

@@ -33,6 +33,10 @@ const Osandojo = () => {
           }
           linkTrial
           linkWithCoaching
+          dates {
+            date
+            content
+          }
         }
       }
   `)
@@ -76,6 +80,8 @@ const Osandojo = () => {
             }, []);
           },
     };
+
+    const scheduleHeadings = ["第一回","第二回","第三回","第四回","第五回","第六回","第七回"];
 
     return (
         <Layout popIn={popIn}>
@@ -523,26 +529,17 @@ const Osandojo = () => {
                         <p className="osandojoSchedule-block-title">
                             講座日程
                         </p>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第一回</span>
-                            <span className="osandojoSchedule-block-text">心地よいお産への心の土台作り・赤ちゃんと恋に落ちよう</span>
-                        </div>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第二回</span>
-                            <span className="osandojoSchedule-block-text">赤ちゃんと一緒に深いリラクゼーションへ</span>
-                        </div>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第三回</span>
-                            <span className="osandojoSchedule-block-text">お産の流れを知ろう</span>
-                        </div>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第四回</span>
-                            <span className="osandojoSchedule-block-text">赤ちゃんと誕生と絆を深めるとき</span>
-                        </div>
-                        <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text bold">第五回</span>
-                            <span className="osandojoSchedule-block-text">全体フォローアップ相談会</span>
-                        </div>
+                        {data.contentfulOdandojo.dates.map((date,index) => (
+                            <Fade bottom>
+                                <div className="osandojoSchedule-block-text-wrapper">
+                                    <span className="osandojoSchedule-block-heading">{scheduleHeadings[index]}</span>
+                                    <div className="osandojoSchedule-block-right-wrapper">
+                                        <p className="osandojoSchedule-block-text">{date.date}</p>
+                                        <p className="osandojoSchedule-block-date">{date.content}</p>
+                                    </div>
+                                </div>
+                            </Fade>
+                        ))}
                     </div>
                     <div className="osandojoSchedule-block-wrapper">
                         <p className="osandojoSchedule-block-title">
