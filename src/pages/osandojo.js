@@ -19,20 +19,14 @@ const Osandojo = () => {
     query {
         contentfulOdandojo {
           earlybirdDeadline
-          feeEarlybird
-          feeRegular
           intro {
             raw
           }
-          link
           vision
-          feeWithCoachingEarlybird
-          feeWithCoachingRegular
           aboutCoaching {
             raw
           }
           linkTrial
-          linkWithCoaching
           dates {
             date
             content
@@ -554,11 +548,14 @@ const Osandojo = () => {
                     </div>
                     <div className="osandojoSchedule-block-wrapper">
                         <p className="osandojoSchedule-block-title">
-                            個別フォローアップ
+                            最高の産後のスタートを切るためのマインドセット
                         </p>
                         <div className="osandojoSchedule-block-text-wrapper">
-                            <span className="osandojoSchedule-block-text">お産当日までの間3回(各1時間)まで、個別フォローアップを開催します。テクニックやお産当日までに出てくる不安や心配に対処します。</span>
+                            <span className="osandojoSchedule-block-text">産後は急激なホルモン変化によって、産後2、3日〜数週間以内に生じるとされる一過性の情緒不安定(マタニティブルー)。これは約半数の方に訪れるといわれます。その際の辛さや悲しさモヤモヤを解消できないことで産後うつへと繋がることがあるとされています。だからこそ産後のそうしたモヤモヤや焦りに繋がりうる考え方や価値観を産前から解消し、より楽ちんに育児に向かうためにこのセッションがあります。</span>
                         </div>
+                        {/* <div className="osandojoSchedule-block-text-wrapper">
+                            <span className="osandojoSchedule-block-text small">※ 通常1セッション￥20.000-</span>
+                        </div> */}
                     </div>
                     <div className="osandojoSchedule-block-wrapper">
                         <p className="osandojoSchedule-block-title">
@@ -577,16 +574,12 @@ const Osandojo = () => {
                             <span className="osandojoSchedule-block-text small">※動画はVimeoでのお渡しとなります。</span>
                         </div>
                     </div>
-                    <div className="osandojoSchedule-block-wrapper">
+                    {/* <div className="osandojoSchedule-block-wrapper">
                         <p className="osandojoSchedule-block-title">
                             費用
                         </p>
-                        {/* <div className="osandojoSchedule-block-text-wrapper">
-                            <p className="meditationFee-explanation osandojo">通常価格：<span className="bold">{data.contentfulOdandojo.feeRegular}(税込)</span></p>
-                            <p className="meditationFee-explanation osandojo">{data.contentfulOdandojo.earlybirdDeadline}までの早割価格：<span className="highlight-navy">{data.contentfulOdandojo.feeEarlybird}(税込)</span></p>
-                        </div> */}
-                    </div>
-                    <Fade bottom>
+                    </div> */}
+                    {/* <Fade bottom>
                         <div className="meditationFee-item">
                             <p className="meditationFee-number osandojo">1</p>
                             <div className="osandojoFee-wrapper">
@@ -628,7 +621,7 @@ const Osandojo = () => {
                                 </a>
                             </div>
                         </div>
-                    </Fade>
+                    </Fade> */}
                 </Col>
                 <Col
                 sm={12}
@@ -686,7 +679,7 @@ const Osandojo = () => {
                 >
                     <Fade bottom>
                     <p className="meditationTrial-title">無料相談会実施中</p>
-                    <p className="meditationTrial-text"><b>{data.contentfulOdandojo.earlybirdDeadline}</b>までの相談会へのご参加で早割よりお得な特別価格をご案内中！</p>
+                    <p className="meditationTrial-text"><b>{data.contentfulOdandojo.earlybirdDeadline}</b>までの相談会へのご参加で特別価格にてご案内中！</p>
                     <a
                         href={data.contentfulOdandojo.linkTrial}
                         className="btn-subscription large trial"
