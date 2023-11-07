@@ -1532,6 +1532,12 @@ Osan Dojo
   margin: 0 0 6px;
 }
 
+.osandojoSchedule-earlybirdDeadline{
+  font-weight: 800;
+  background-color: #FFE7CB;
+  color:#001652;
+}
+
 /****************************
 Favourites
 ****************************/

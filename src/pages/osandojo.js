@@ -679,7 +679,7 @@ const Osandojo = () => {
                 >
                     <Fade bottom>
                     <p className="meditationTrial-title">無料相談会実施中</p>
-                    <p className="meditationTrial-text"><b>{data.contentfulOdandojo.earlybirdDeadline}</b>までの相談会へのご参加で特別価格にてご案内中！</p>
+                    <p className="meditationTrial-text"><span className="osandojoSchedule-earlybirdDeadline">{data.contentfulOdandojo.earlybirdDeadline}</span>までの相談会へのご参加で特別価格にてご案内中！</p>
                     <a
                         href={data.contentfulOdandojo.linkTrial}
                         className="btn-subscription large trial"
