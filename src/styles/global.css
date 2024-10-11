@@ -59,6 +59,15 @@ Nav bar
   color: #ffffff;
 }
 
+.my-nav-link.orange:hover{
+  color: #FFAA7B;
+  text-decoration: none;
+}
+
+.my-nav-link.orange:active{
+  color: #FFAA7B;
+}
+
 .nav-link-active:hover {
   border-bottom: 2px solid #ffffff;
   padding-bottom: 5px;
@@ -73,6 +82,10 @@ Nav bar
 }
 .my-nav-link svg:hover {
   fill: #ffffff;
+}
+
+.my-nav-link.orange svg:hover {
+  fill: #FFAA7B;
 }
 
 .hamburger{
@@ -233,6 +246,10 @@ Schedule
   font-size: 3rem;
 }
 
+.title-menu.bold{
+  font-weight: bold;
+}
+
 .class-wrapper {
   width: 100%;
   margin-bottom: 10rem;
@@ -280,6 +297,10 @@ Schedule
   width: 100%;
 }
 
+.class-image .gatsby-image-wrapper{
+  border-radius: 20px;
+}
+
 .btn-book-wrapper {
   margin-top: 2rem;
   text-align: center;
@@ -320,6 +341,10 @@ Schedule
 .class-link:active {
   color: #000852;
   text-decoration: underline;
+}
+
+.section-schedule.archives {
+  background-color: #FFE7CB;
 }
 
 /****************************
@@ -483,6 +508,10 @@ Subscription
   flex-direction: column;
 }
 
+.subscriptionContent-border.navyBorder{
+  border-color: #000852;
+}
+
 .subscriptionContent-index {
   position: absolute;
   top: -30px;
@@ -497,6 +526,11 @@ Subscription
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.subscriptionContent-index.navyBorder{
+  background-color: #000852;
+  color: white;
 }
 
 .subscriptionContent-title {
@@ -1538,6 +1572,138 @@ Osan Dojo
   color:#001652;
 }
 
+
+/****************************
+Video
+****************************/
+.section-videoHero{
+  position: relative;
+  background: linear-gradient(180deg, #FFF 90%, #FFF4CB 100%);
+  height:100vh;
+  min-height: 1000px;
+  max-height: 1000px
+}
+
+.videoHero-circle-green{
+  position:absolute !important;
+  width: 1000px;
+  top: -0px;
+  left: 200px;
+  opacity: 0.3;
+}
+
+.videoHero-circle-orange{
+  position:absolute !important;
+  width: 1000px;
+  top: -400px;
+  left: -200px;
+  opacity: 0.3;
+}
+
+.videoHero-mockup{
+  position:absolute !important;
+  width: 600px;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.videoHero-title-wrapper{
+  position:absolute !important;
+  width: 400px;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.videoHero-subtitle{
+  color: #001652;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.videoHero-title{
+  color: #001652;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.section-videoAbout {
+  padding: 6rem 0;
+  background-color: #FFF4CB;
+}
+
+.btn-video {
+  display: inline-block;
+  text-align: center;
+  padding: 1.5rem 4rem;
+  margin-top: 20px;
+  background-color: #000852;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  position: relative;
+  z-index:3;
+}
+
+.btn-video:hover {
+  color: #000852;
+  background-color: #FFAA7B;
+  text-decoration: none;
+}
+.btn-video:active {
+  color: #000852;
+  background-color: #FFAA7B;
+  text-decoration: none;
+}
+
+.videoFeature-wrapper{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto 80px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  border: #000852 solid 4px;
+}
+
+.videoFeature-left{
+  width: 40%;
+}
+
+.videoFeature-left-image{
+  border-radius: 10px;
+  width: 100%;
+}
+
+.videoFeature-right{
+  width: 50%;
+  margin-bottom: 0;
+}
+
+.section-meditationTrial.video{
+  background-color: #FFF4CB;
+}
+
+.meditationTrial-title.video{
+  color: #000852;
+}
+
+.meditationTrial-text.video{
+  color: #000852;
+}
+
+.btn-subscription.video{
+  background-color: #FFAA7B;
+  color: white;
+}
+
 /****************************
 Favourites
 ****************************/
@@ -2468,6 +2634,65 @@ Responsive
     width: 100%;
     margin-left: 0px;
   }
+
+  .section-videoHero{
+    height:100vh;
+  }
+  
+  .videoHero-circle-green{
+    width: 800px;
+    top: 0px;
+    left: 100px;
+  }
+  
+  .videoHero-circle-orange{
+    width: 800px;
+    top: -300px;
+    left: -200px;
+  }
+  
+  .videoHero-mockup{
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .videoHero-title-wrapper{
+    width: 100%;
+    top: 30%;
+    left: 60px;
+  }
+  
+  .videoHero-title{
+    font-size: 4.5rem;
+  }
+  
+  .videoFeature-wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto 80px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: #000852 solid 4px;
+  }
+  
+  .videoFeature-left{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .videoFeature-left-image{
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .videoFeature-right{
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -2861,6 +3086,34 @@ Responsive
     text-align: left;
     margin-bottom: 10px
   }
+
+  .videoHero-circle-green{
+    width: 800px;
+    top: 0px;
+    left: 100px;
+  }
+  
+  .videoHero-circle-orange{
+    width: 800px;
+    top: -300px;
+    left: -200px;
+  }
+  
+  .videoHero-mockup{
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .videoHero-title-wrapper{
+    width: 100%;
+    top: 30%;
+    left: 80px;
+  }
+  
+  .videoHero-title{
+    font-size: 4.5rem;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -3186,6 +3439,39 @@ Responsive
   .osandojo{
     font-size: 1.2rem;
   }
+
+  .videoHero-circle-green{
+    width: 800px;
+    top: 0px;
+    left: 100px;
+  }
+  
+  .videoHero-circle-orange{
+    width: 800px;
+    top: -300px;
+    left: -200px;
+  }
+  
+  .videoHero-mockup{
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .videoHero-title-wrapper{
+    width: 100%;
+    top: 30%;
+    left: 0;
+    text-align: center;
+  }
+  
+  .videoHero-title{
+    font-size: 4.5rem;
+  }
+
+  .videoHero-subtitle{
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -3228,6 +3514,38 @@ Responsive
   }
   .osandojoAbout-subtitle{
     width: 80%;
+  }
+  .videoHero-circle-green{
+    width: 800px;
+    top: 0px;
+    left: 100px;
+  }
+  
+  .videoHero-circle-orange{
+    width: 800px;
+    top: -300px;
+    left: -200px;
+  }
+  
+  .videoHero-mockup{
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .videoHero-title-wrapper{
+    width: 100%;
+    top: 30%;
+    left: 0;
+    text-align: center;
+  }
+  
+  .videoHero-title{
+    font-size: 4.5rem;
+  }
+
+  .videoHero-subtitle{
+    text-align: center;
   }
 }
 

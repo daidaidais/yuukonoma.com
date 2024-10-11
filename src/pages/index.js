@@ -4,6 +4,7 @@ import Schedule from "../components/Schedule";
 import Hero from "../components/Hero";
 import SEO from "../components/Seo";
 import { useStaticQuery, graphql } from "gatsby";
+import Archives from "../components/Archives";
 
 const Index = () => {
   const [windowBottom, setWindowBottom] = useState(0);
@@ -27,6 +28,9 @@ const Index = () => {
       contentfulSchedule {
         title
       }
+      contentfulArchives {
+        title
+      }
     }
   `);
 
@@ -35,6 +39,7 @@ const Index = () => {
       <SEO title="Yuuko Noma | Top" />
       <Hero />
       <Schedule title={data.contentfulSchedule.title} />
+      <Archives title={data.contentfulArchives.title} />
     </Layout>
   );
 };

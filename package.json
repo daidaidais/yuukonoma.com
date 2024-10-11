@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "description": "yuukonoma",
-  "author": "daidaidais",
+  "author": "diceky",
   "keywords": [
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "set NODE_ENV=dev && gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -17,7 +17,7 @@
   "dependencies": {
     "@fontsource/noto-sans-jp": "^4.2.2",
     "bootstrap": "^4.6.0",
-    "gatsby": "^4.25.6",
+    "gatsby": "^3.x.x",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-google-analytics": "^3.4.0",
     "gatsby-plugin-google-fonts": "^1.0.1",

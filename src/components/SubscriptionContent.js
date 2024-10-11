@@ -7,6 +7,9 @@ const SubscriptionContent = (props) => {
   const wrapperRef = useRef();
   useEffect(() => {}, [props]);
 
+  const borderClass= props.color==="navyBorder" ? "subscriptionContent-border navyBorder" : "subscriptionContent-border";
+  const indexClass = props.color==="navyBorder" ? "subscriptionContent-index navyBorder" : "subscriptionContent-index";
+
   const Text = ({ children }) => children;
   const InlineLink = ({ link, children }) => (
     <a href={link} className="class-link" target="_blank" rel="noreferrer">
@@ -24,8 +27,8 @@ const SubscriptionContent = (props) => {
   };
 
   return (
-    <div className="subscriptionContent-border" ref={wrapperRef}>
-      <div className="subscriptionContent-index">{props.index + 1}</div>
+    <div className={borderClass} ref={wrapperRef}>
+      <div className={indexClass}>{props.index + 1}</div>
       <p className="subscriptionContent-title">{props.title}</p>
       <p className="subscriptionContent-subtitle">{props.subtitle}</p>
       <p className="subscriptionContent-explanation">
