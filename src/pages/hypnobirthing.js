@@ -172,7 +172,7 @@ const Hypnobirthing = () => {
 
     return (
         <Layout popIn={popIn}>
-            <SEO title="Yuuko Noma | HYPNOBIRTHING" />
+            <SEO title="Hypnobirthing" />
             <Row className="section-hypnobirthHero">
                 <Col
                     xs={12}

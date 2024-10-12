@@ -36,7 +36,7 @@ const Index = () => {
 
   return (
     <Layout popIn={popIn}>
-      <SEO title="Yuuko Noma | Top" />
+      <SEO title="Top" />
       <Hero />
       <Schedule title={data.contentfulSchedule.title} />
       <Archives title={data.contentfulArchives.title} />

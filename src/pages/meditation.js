@@ -70,7 +70,7 @@ const Meditation = () => {
 
     return (
         <Layout popIn={popIn}>
-            <SEO title="Yuuko Noma | 瞑想講義" />
+            <SEO title="瞑想講座" />
 
             <Row className="section-meditationHero">
                 <Col

@@ -72,7 +72,7 @@ const Subscription = () => {
 
   return (
     <Layout popIn={popIn}>
-      <SEO title="Yuuko Noma | Subscription" />
+      <SEO title="Subscription" />
       <Row className="section-subscriptionAbout">
         <Col
           xs={12}

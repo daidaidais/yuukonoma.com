@@ -93,7 +93,7 @@ const Video = () => {
     return (
         <Layout popIn={popIn} hoverColor="orange">
             <SEO
-                title="Yuuko Noma | 動画教材"
+                title="動画教材"
                 description="のべ1000名以上に指導してきた講座やレッスンを、いつでも学びたいときに学べる動画教材としてご用意しております。"
             />
 
