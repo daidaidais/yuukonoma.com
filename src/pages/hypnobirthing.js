@@ -36,19 +36,19 @@ const Hypnobirthing = () => {
       }
     }
   `)
-    
+
     const [windowBottom, setWindowBottom] = useState(0);
     const [docHeight, setDocHeight] = useState(0);
     const [popIn, setPopIn] = useState(false);
 
     useEffect(() => {
         if (typeof window !== `undefined`) {
-          window.onscroll = () => {
-            setWindowBottom(window.pageYOffset + window.innerHeight);
-            setDocHeight(window.document.body.offsetHeight);
-          };
+            window.onscroll = () => {
+                setWindowBottom(window.pageYOffset + window.innerHeight);
+                setDocHeight(window.document.body.offsetHeight);
+            };
         }
-      }, []);
+    }, []);
 
     if (docHeight - windowBottom < 100 && popIn === false) setPopIn(true);
     else if (docHeight - windowBottom >= 100 && popIn === true) setPopIn(false);
@@ -56,7 +56,7 @@ const Hypnobirthing = () => {
     const Text = ({ children }) => children;
     const InlineLink = ({ link, children }) => (
         <a href={link} className="class-link" target="_blank" rel="noreferrer">
-        {children}
+            {children}
         </a>
     );
 
@@ -68,13 +68,13 @@ const Hypnobirthing = () => {
             ),
             [BLOCKS.UL_LIST]: (node, children) => (
                 <ul className="hypnobirthDetails-explanation-bullets">{children}</ul>
-              ),
+            ),
         },
         renderText: text => {
             return text.split('\n').reduce((children, textSegment, index) => {
-              return [...children, index > 0 && <br key={index} />, textSegment];
+                return [...children, index > 0 && <br key={index} />, textSegment];
             }, []);
-          },
+        },
     };
 
     const options2 = {
@@ -85,13 +85,13 @@ const Hypnobirthing = () => {
             ),
             [BLOCKS.UL_LIST]: (node, children) => (
                 <ul className="hypnobirthDetails-notes">{children}</ul>
-              ),
+            ),
         },
         renderText: text => {
             return text.split('\n').reduce((children, textSegment, index) => {
-              return [...children, index > 0 && <br key={index} />, textSegment];
+                return [...children, index > 0 && <br key={index} />, textSegment];
             }, []);
-          },
+        },
     };
 
     const contentTitle = [
@@ -175,11 +175,11 @@ const Hypnobirthing = () => {
             <SEO title="Yuuko Noma | HYPNOBIRTHING" />
             <Row className="section-hypnobirthHero">
                 <Col
-                xs={12}
-                sm={{ span: 10, offset: 1 }}
-                md={{ span: 6, offset: 2 }}
-                lg={{ span: 6, offset: 2 }}
-                xl={{ span: 4, offset: 3 }}
+                    xs={12}
+                    sm={{ span: 10, offset: 1 }}
+                    md={{ span: 6, offset: 2 }}
+                    lg={{ span: 6, offset: 2 }}
+                    xl={{ span: 4, offset: 3 }}
                 >
                     <p className="hypnobirthHero-title">
                         HypnoBirthing®
@@ -188,139 +188,139 @@ const Hypnobirthing = () => {
                         the Mongan Method
                     </p>
                     <p className="hypnobirthHero-explanation">
-                    {renderRichText(
-                        data.allContentfulHypnobirthing.nodes[0].intro,
-                        options2
-                    )}
+                        {renderRichText(
+                            data.allContentfulHypnobirthing.nodes[0].intro,
+                            options2
+                        )}
                     </p>
                     <Fade bottom>
-                    <a
-                        href={data.allContentfulHypnobirthing.nodes[0].dates[0].link}
-                        className="btn-subscription block"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        お申し込みはこちら
-                    </a>
+                        <a
+                            href={data.allContentfulHypnobirthing.nodes[0].dates[0].link}
+                            className="btn-subscription block"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            お申し込みはこちら
+                        </a>
                     </Fade>
                 </Col>
                 <Col
-                xs={12}
-                sm={{ span: 10, offset: 1 }}
-                md={{ span: 2 }}
-                lg={{ span: 2 }}
-                xl={{ span: 2 }}
-                className="hypnobirthHero-image-wrapper"
+                    xs={12}
+                    sm={{ span: 10, offset: 1 }}
+                    md={{ span: 2 }}
+                    lg={{ span: 2 }}
+                    xl={{ span: 2 }}
+                    className="hypnobirthHero-image-wrapper"
                 >
                     <StaticImage
-                    src="../images/hypnobirthing.png"
-                    alt="hypnobirthing.png"
-                    className="hypnobirthHero-image"
-                    loading="eager"
-                    placeholder="blurred"
-                />
+                        src="../images/hypnobirthing.png"
+                        alt="hypnobirthing.png"
+                        className="hypnobirthHero-image"
+                        loading="eager"
+                        placeholder="blurred"
+                    />
                 </Col>
             </Row>
-            
+
             <Row className="section-hypnobirthAbout">
                 <Col
-                sm={12}
-                md={12}
-                lg={12}
-                className="subscriptionContents-title-wrapper"
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="subscriptionContents-title-wrapper"
                 >
                     <Fade bottom>
-                    <div className="subscriptionContents-title-line"></div>
-                    <p className="subscriptionContents-title">ヒプノバーシングについて</p>
-                    <div className="subscriptionContents-title-line"></div>
+                        <div className="subscriptionContents-title-line"></div>
+                        <p className="subscriptionContents-title">ヒプノバーシングについて</p>
+                        <div className="subscriptionContents-title-line"></div>
                     </Fade>
                 </Col>
                 <Col
-                sm={{ span: 10, offset: 1 }}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 6, offset: 3 }}
-                className="meditationQuestion-list"
+                    sm={{ span: 10, offset: 1 }}
+                    md={{ span: 8, offset: 2 }}
+                    lg={{ span: 8, offset: 2 }}
+                    xl={{ span: 6, offset: 3 }}
+                    className="meditationQuestion-list"
                 >
                     <Fade bottom>
-                    <p className="hypnobirthAbout-explanation">
-                    {renderRichText(
-                        data.allContentfulHypnobirthing.nodes[0].about,
-                        options2
-                    )}
-                    </p>
+                        <p className="hypnobirthAbout-explanation">
+                            {renderRichText(
+                                data.allContentfulHypnobirthing.nodes[0].about,
+                                options2
+                            )}
+                        </p>
                     </Fade>
                 </Col>
             </Row>
-            
+
             <Row className="section-hypnobirthMerits">
                 <Col
-                sm={12}
-                md={12}
-                lg={12}
-                className="subscriptionContents-title-wrapper"
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="subscriptionContents-title-wrapper"
                 >
                     <Fade bottom>
-                    <div className="subscriptionContents-title-line"></div>
-                    <p className="subscriptionContents-title">ヒプノバーシングのメリット</p>
-                    <div className="subscriptionContents-title-line"></div>
+                        <div className="subscriptionContents-title-line"></div>
+                        <p className="subscriptionContents-title">ヒプノバーシングのメリット</p>
+                        <div className="subscriptionContents-title-line"></div>
                     </Fade>
                 </Col>
                 <Col
-                sm={{ span: 10, offset: 1 }}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 6, offset: 3 }}
-                xl={{ span: 4, offset: 4 }}
-                className="meditationQuestion-list"
+                    sm={{ span: 10, offset: 1 }}
+                    md={{ span: 8, offset: 2 }}
+                    lg={{ span: 6, offset: 3 }}
+                    xl={{ span: 4, offset: 4 }}
+                    className="meditationQuestion-list"
                 >
                     <Fade bottom>
-                    <Bullet text="会陰切開やその他の医療介入の必要性が少なくなる"/>
-                    <Bullet text="お産における痛みが減る"/>
-                    <Bullet text="お産にかかる時間を短くする"/>
-                    <Bullet text="小さすぎる、大きすぎる赤ちゃんが減る"/>
-                    <Bullet text="お産の間の疲労が軽減する"/>
-                    <Bullet text="お産において骨盤底筋群もダメージを受けにくくなる"/>
-                    <Bullet text="パートナーとの絆が深まる"/>
-                    <Bullet text="産後の回復がスムーズ"/>
+                        <Bullet text="会陰切開やその他の医療介入の必要性が少なくなる" />
+                        <Bullet text="お産における痛みが減る" />
+                        <Bullet text="お産にかかる時間を短くする" />
+                        <Bullet text="小さすぎる、大きすぎる赤ちゃんが減る" />
+                        <Bullet text="お産の間の疲労が軽減する" />
+                        <Bullet text="お産において骨盤底筋群もダメージを受けにくくなる" />
+                        <Bullet text="パートナーとの絆が深まる" />
+                        <Bullet text="産後の回復がスムーズ" />
                     </Fade>
                 </Col>
             </Row>
 
             <Row className="section-hypnobirthContent">
                 <Col
-                sm={12}
-                md={12}
-                lg={12}
-                className="subscriptionContents-title-wrapper"
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="subscriptionContents-title-wrapper"
                 >
                     <Fade bottom>
-                    <div className="subscriptionContents-title-line"></div>
-                    <p className="subscriptionContents-title">ヒプノバーシングのクラス内容</p>
-                    <div className="subscriptionContents-title-line"></div>
+                        <div className="subscriptionContents-title-line"></div>
+                        <p className="subscriptionContents-title">ヒプノバーシングのクラス内容</p>
+                        <div className="subscriptionContents-title-line"></div>
                     </Fade>
                 </Col>
                 <Col
-                sm={{ span: 10, offset: 1 }}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 6, offset: 3 }}
-                className="meditationQuestion-list"
+                    sm={{ span: 10, offset: 1 }}
+                    md={{ span: 8, offset: 2 }}
+                    lg={{ span: 8, offset: 2 }}
+                    xl={{ span: 6, offset: 3 }}
+                    className="meditationQuestion-list"
                 >
                     <Fade bottom>
-                    <p className="hypnobirthContent-text">
-                    ５日間を通してお産当日に心と身体を深いリラックスへ導けるようになるための実践的なテクニックを
-                    お伝えして練習を繰り返していきます。そうして身体・意識・感情・心の準備をしていくのがこの5日間のプログラムです。
-                    </p>
+                        <p className="hypnobirthContent-text">
+                            ５日間を通してお産当日に心と身体を深いリラックスへ導けるようになるための実践的なテクニックを
+                            お伝えして練習を繰り返していきます。そうして身体・意識・感情・心の準備をしていくのがこの5日間のプログラムです。
+                        </p>
                     </Fade>
                 </Col>
                 {contentTitle.map((title, index) => (
                     <Col
-                    sm={12}
-                    md={{ span: 8, offset: 2 }}
-                    lg={{ span: 8, offset: 2 }}
-                    xl={{ span: 6, offset: 3 }}
-                    className="subscriptionContent-wrapper"
-                    >   
+                        sm={12}
+                        md={{ span: 8, offset: 2 }}
+                        lg={{ span: 8, offset: 2 }}
+                        xl={{ span: 6, offset: 3 }}
+                        className="subscriptionContent-wrapper"
+                    >
                         <HypnobirthContent
                             title={title}
                             bullets={contentBullet[index]}
@@ -328,106 +328,106 @@ const Hypnobirthing = () => {
                             key={index}
                         />
                     </Col>
-                ))}          
+                ))}
             </Row>
 
             <Row className="section-hypnobirthDetails">
                 <Col
-                sm={12}
-                md={12}
-                lg={12}
-                className="subscriptionContents-title-wrapper"
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="subscriptionContents-title-wrapper"
                 >
                     <Fade bottom>
-                    <div className="subscriptionContents-title-line"></div>
-                    <p className="subscriptionContents-title">開催日時</p>
-                    <div className="subscriptionContents-title-line"></div>
+                        <div className="subscriptionContents-title-line"></div>
+                        <p className="subscriptionContents-title">開催日時</p>
+                        <div className="subscriptionContents-title-line"></div>
                     </Fade>
                 </Col>
-                <Col
-                sm={{ span: 8, offset: 2 }}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 4, offset: 2 }}
+                {/* <Col
+                    sm={{ span: 8, offset: 2 }}
+                    md={{ span: 8, offset: 2 }}
+                    lg={{ span: 8, offset: 2 }}
+                    xl={{ span: 4, offset: 2 }}
                 >
                     <Fade bottom>
-                    <div className="hypnobirthDetails-item">
-                        <p className="hypnobirthDetails-title">{data.allContentfulHypnobirthing.nodes[0].dates[0].title}</p>
-                        <p className="hypnobirthDetails-explanation">
-                            {renderRichText(
-                                data.allContentfulHypnobirthing.nodes[0].dates[0].explanation,
-                                options1
-                            )}
-                        </p>
-                        {data.allContentfulHypnobirthing.nodes[0].dates[0].dates.map((date,index) => (
-                            <div className="hypnobirthDetails-date">
-                                <span className="hypnobirthDetails-date-left">{`DAY ${index+1}`}</span>
-                                <span className="hypnobirthDetails-date-right">{date}</span>
-                            </div>
+                        <div className="hypnobirthDetails-item">
+                            <p className="hypnobirthDetails-title">{data.allContentfulHypnobirthing.nodes[0].dates[0].title}</p>
+                            <p className="hypnobirthDetails-explanation">
+                                {renderRichText(
+                                    data.allContentfulHypnobirthing.nodes[0].dates[0].explanation,
+                                    options1
+                                )}
+                            </p>
+                            {data.allContentfulHypnobirthing.nodes[0].dates[0].dates.map((date, index) => (
+                                <div className="hypnobirthDetails-date">
+                                    <span className="hypnobirthDetails-date-left">{`DAY ${index + 1}`}</span>
+                                    <span className="hypnobirthDetails-date-right">{date}</span>
+                                </div>
                             ))}
-                        <p className="hypnobirthDetails-notes-heading">&lt;講座詳細&gt;</p>
-                        {renderRichText(
-                            data.allContentfulHypnobirthing.nodes[0].dates[0].notes,
-                            options2
-                        )}
-                        <a
-                            href={data.allContentfulHypnobirthing.nodes[0].dates[0].link}
-                            className="btn-subscription large"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            お申し込みはこちら
-                        </a>
-                    </div>
+                            <p className="hypnobirthDetails-notes-heading">&lt;講座詳細&gt;</p>
+                            {renderRichText(
+                                data.allContentfulHypnobirthing.nodes[0].dates[0].notes,
+                                options2
+                            )}
+                            <a
+                                href={data.allContentfulHypnobirthing.nodes[0].dates[0].link}
+                                className="btn-subscription large"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                お申し込みはこちら
+                            </a>
+                        </div>
                     </Fade>
-                </Col>
+                </Col> */}
                 <Col
-                sm={{ span: 8, offset: 2 }}
-                md={{ span: 8, offset: 2 }}
-                lg={{ span: 8, offset: 2 }}
-                xl={{ span: 4, offset: 0 }}
+                    sm={{ span: 8, offset: 2 }}
+                    md={{ span: 8, offset: 2 }}
+                    lg={{ span: 8, offset: 2 }}
+                    xl={{ span: 4, offset: 2 }}
                 >
                     <Fade bottom>
-                    <div className="hypnobirthDetails-item">
-                        <p className="hypnobirthDetails-title">{data.allContentfulHypnobirthing.nodes[0].dates[1].title}</p>
-                        <p className="hypnobirthDetails-explanation">
+                        <div className="hypnobirthDetails-item">
+                            <p className="hypnobirthDetails-title">{data.allContentfulHypnobirthing.nodes[0].dates[0].title}</p>
+                            <p className="hypnobirthDetails-explanation">
+                                {renderRichText(
+                                    data.allContentfulHypnobirthing.nodes[0].dates[0].explanation,
+                                    options1
+                                )}
+                            </p>
+                            <p className="hypnobirthDetails-notes-heading">&lt;講座詳細&gt;</p>
                             {renderRichText(
-                                data.allContentfulHypnobirthing.nodes[0].dates[1].explanation,
-                                options1
+                                data.allContentfulHypnobirthing.nodes[0].dates[0].notes,
+                                options2
                             )}
-                        </p>
-                        <p className="hypnobirthDetails-notes-heading">&lt;講座詳細&gt;</p>
-                        {renderRichText(
-                            data.allContentfulHypnobirthing.nodes[0].dates[1].notes,
-                            options2
-                        )}
-                        <a
-                            href={data.allContentfulHypnobirthing.nodes[0].dates[1].link}
-                            className="btn-subscription large"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            お申し込みはこちら
-                        </a>
-                    </div>
+                            <a
+                                href={data.allContentfulHypnobirthing.nodes[0].dates[0].link}
+                                className="btn-subscription large"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                お申し込みはこちら
+                            </a>
+                        </div>
                     </Fade>
                 </Col>
             </Row>
 
             <Row className="section-hypnobirthCta">
                 <Col
-                sm={12}
-                md={12}
-                lg={12}
-                className="meditationCta-wrapper"
+                    sm={12}
+                    md={12}
+                    lg={12}
+                    className="meditationCta-wrapper"
                 >
                     <Fade bottom>
-                    
+
                     </Fade>
                 </Col>
             </Row>
         </Layout>
-      );
+    );
 }
 
 export default Hypnobirthing;

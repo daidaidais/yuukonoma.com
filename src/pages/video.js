@@ -231,12 +231,13 @@ const Video = () => {
                                         ))}
                                     </div>
                                     <a
-                                        href={link}
+                                        // href={link}
+                                        href=""
                                         className="btn-video"
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        購入する
+                                        ただいま準備中
                                     </a>
                                 </div>
                             </div>
