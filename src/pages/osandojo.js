@@ -16,23 +16,21 @@ const Osandojo = () => {
     "linear-gradient(30deg, rgba(255,170,123,1) 0%, rgba(255,244,203,1) 100%)";
 
     const data = useStaticQuery(graphql`
-    query {
-        contentfulOdandojo {
-          earlybirdDeadline
-          intro {
+    {
+      contentfulVideo {
+        contents {
+          explanation {
             raw
           }
-          vision
-          aboutCoaching {
-            raw
-          }
-          linkTrial
-          dates {
-            date
-            content
-          }
+          title
+          details
+          link
+        }
+        explanation {
+          explanation
         }
       }
+    }
   `)
 
     const [windowBottom, setWindowBottom] = useState(0);
@@ -401,7 +399,7 @@ const Osandojo = () => {
                 xs={{ span: 10, offset: 1 }}
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 10, offset: 1 }}
-                lg={5}
+                lg={{ span: 5, offset: 0 }}
                 className="osandojoFeature-right"
                 >
                     <p className="osandojoFeature-right-title">満足のいくお産を叶えるための<br/>《ヒプノバーシング出産準備クラス》</p>
@@ -443,7 +441,7 @@ const Osandojo = () => {
                 <Col
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 10, offset: 1 }}
-                lg={5}
+                lg={{ span: 5, offset: 0 }}
                 className="osandojoFeature-right"
                 >
                     <p className="osandojoFeature-right-title">産後の綺麗を叶えるための動画教材<br/>《妊娠中の身体の変化、産後の身体について講座》</p>
@@ -475,7 +473,7 @@ const Osandojo = () => {
                 xs={{ span: 10, offset: 1 }}
                 sm={{ span: 10, offset: 1 }}
                 md={{ span: 10, offset: 1 }}
-                lg={5}
+                lg={{ span: 5, offset: 0 }}
                 className="osandojoFeature-right"
                 >
                     <p className="osandojoFeature-right-title">母体を安産へ導くための<br/>《マタニティヨガ》</p>

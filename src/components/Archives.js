@@ -3,30 +3,28 @@ import Lesson from "./Lesson";
 import { useStaticQuery, graphql } from "gatsby";
 import { Row, Col } from "react-bootstrap";
 
-const Schedule = (props, { children }) => {
+const Archives = (props, { children }) => {
   const data = useStaticQuery(graphql`
-    query allContentfulUser {
-      allContentfulSchedule {
-        nodes {
-          lessons {
-            isOnline
-            title
-            time
-            explanation {
+    {
+      contentfulArchives {
+        lessons {
+          isOnline
+          title
+          time
+          explanation {
               raw
             }
-            fee {
+          fee {
               raw
             }
-            link
-            linkText
-            id
-            image {
-              file {
-                fileName
-              }
-              gatsbyImageData
+          link
+          linkText
+          id
+          image {
+            file {
+              fileName
             }
+            gatsbyImageData
           }
         }
       }
@@ -34,24 +32,22 @@ const Schedule = (props, { children }) => {
   `);
 
   return (
-    <Row id="section-schedule" className="section-schedule">
+    <Row className="section-schedule archives">
       <Col
         sm={{ span: 8, offset: 1 }}
         md={{ span: 8, offset: 1 }}
         xl={{ span: 8, offset: 1 }}
       >
         <div className="schedule-title">
-          <p className="title-menu bold">{props.title}</p>
+          <p className="title-menu">{props.title}</p>
         </div>
       </Col>
-      {data.allContentfulSchedule.nodes[0].lessons.map(
+      {data.contentfulArchives.lessons.map(
         ({ id, title, time, explanation, fee, link, linkText, image, isOnline }) => (
           <Lesson
             key={id}
             title={title}
-            time={time}
             explanation={explanation}
-            fee={fee}
             image={image}
             link={link}
             linkText={linkText}
@@ -63,4 +59,4 @@ const Schedule = (props, { children }) => {
   );
 };
 
-export default Schedule;
+export default Archives;

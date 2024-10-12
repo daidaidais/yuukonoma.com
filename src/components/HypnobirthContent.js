@@ -13,7 +13,7 @@ const HypnobirthContent = (props) => {
     <div className="hypnobirthContent-border" ref={wrapperRef}>
       <div className="hypnobirthContent-index">{indexContent}</div>
       <p className="hypnobirthContent-title">{props.title}</p>
-      {props.bullets.map(x => (<Bullet text={x}/>))}
+      {props.bullets.map((x,index) => (<Bullet key={index} text={x}/>))}
     </div>
     </Fade>
   );

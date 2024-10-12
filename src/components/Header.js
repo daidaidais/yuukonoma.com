@@ -3,9 +3,11 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Navbar, Nav } from "react-bootstrap";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-const Header = () => {
+const Header = ({hoverColor}) => {
   const coverGradient =
     "linear-gradient(30deg, rgba(255,170,123,1) 0%, rgba(255,244,203,1) 100%)";
+
+  const navClass = hoverColor === "orange" ? "my-nav-link orange" : "my-nav-link";
 
   return (
     <Navbar expand="lg" fixed="top" className="mt-3 mb-3">
@@ -26,14 +28,14 @@ const Header = () => {
               direction="right"
               bg={coverGradient}
               to="/"
-              className="my-nav-link"
+              className={navClass}
               activeClassName="nav-link-active"
             >
               TOP
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
-            <AniLink
+            {/* <AniLink
               cover
               direction="right"
               bg={coverGradient}
@@ -42,28 +44,20 @@ const Header = () => {
               activeClassName="nav-link-active"
             >
               お産道場
-            </AniLink>
-            {/* <AniLink
+            </AniLink> */}
+            <AniLink
               cover
               direction="right"
               bg={coverGradient}
               to="/hypnobirthing"
-              className="my-nav-link"
+              className={navClass}
               activeClassName="nav-link-active"
             >
               HYPNOBIRTHING
-            </AniLink> */}
-            {/* <a
-              className="my-nav-link"
-              href="https://osandojo.my.canva.site"
-              target="_blank"
-              rel="noreferrer"
-            >
-              お産道場
-            </a> */}
+            </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
-          <AniLink
+          {/* <AniLink
               cover
               direction="right"
               bg={coverGradient}
@@ -72,6 +66,16 @@ const Header = () => {
               activeClassName="nav-link-active"
             >
               瞑想講座
+            </AniLink> */}
+            <AniLink
+              cover
+              direction="right"
+              bg={coverGradient}
+              to="/video"
+              className={navClass}
+              activeClassName="nav-link-active"
+            >
+              動画教材
             </AniLink>
           </Nav.Item>
           <Nav.Item as="li">
@@ -80,7 +84,7 @@ const Header = () => {
               direction="right"
               bg={coverGradient}
               to="/profile"
-              className="my-nav-link"
+              className={navClass}
               activeClassName="nav-link-active"
             >
               PROFILE
@@ -88,7 +92,7 @@ const Header = () => {
           </Nav.Item>
           <Nav.Item as="li">
             <a
-              className="my-nav-link"
+              className={navClass}
               href="https://www.instagram.com/yuukonoma/"
               target="_blank"
               rel="noreferrer"
