@@ -9,12 +9,9 @@ import { useStaticQuery, graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import Fade from 'react-reveal/Fade';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Video = () => {
-    const coverGradient =
-        "linear-gradient(30deg, rgba(255,170,123,1) 0%, rgba(255,244,203,1) 100%)";
 
     const data = useStaticQuery(graphql`
     {
@@ -232,7 +229,7 @@ const Video = () => {
                                     </div>
                                     <a
                                         // href={link}
-                                        href="#"
+                                        href=""
                                         className="btn-video"
                                         // target="_blank"
                                         rel="noreferrer"
