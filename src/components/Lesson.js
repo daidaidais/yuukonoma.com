@@ -68,7 +68,7 @@ const Lesson = (props) => {
               <a
                 href={props.link}
                 className="btn-book"
-                target="_blank"
+                // target="_blank"
                 rel="noreferrer"
               >
                 {props.linkText ? props.linkText : `申し込む`}

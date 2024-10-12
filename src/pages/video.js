@@ -232,9 +232,9 @@ const Video = () => {
                                     </div>
                                     <a
                                         // href={link}
-                                        href=""
+                                        href="#"
                                         className="btn-video"
-                                        target="_blank"
+                                        // target="_blank"
                                         rel="noreferrer"
                                     >
                                         ただいま準備中
