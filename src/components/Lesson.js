@@ -63,18 +63,16 @@ const Lesson = (props) => {
           xl={{ span: 4, offset: 0 }}
         >
           <SlickSlider image={props.image} className="class-image-wrapper" />
-          {props.link !== " " && props.link !== null && (
             <div className="btn-book-wrapper">
               <a
                 href={props.link}
                 className="btn-book"
-                // target="_blank"
+                target={props.link==="" ? "_self" : "_blank"}
                 rel="noreferrer"
               >
                 {props.linkText ? props.linkText : `申し込む`}
               </a>
             </div>
-          )}
         </Col>
       </Row>
     </div>

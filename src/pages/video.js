@@ -229,7 +229,6 @@ const Video = () => {
                                     </div>
                                     <a
                                         // href={link}
-                                        href=""
                                         className="btn-video"
                                         // target="_blank"
                                         rel="noreferrer"

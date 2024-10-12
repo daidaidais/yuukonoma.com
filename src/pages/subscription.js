@@ -45,7 +45,7 @@ const Subscription = () => {
   useEffect(() => {
     if (typeof window !== `undefined`) {
       window.onscroll = () => {
-        setWindowBottom(window.pageYOffset + window.innerHeight);
+        setWindowBottom(window.scrollY + window.innerHeight);
         setDocHeight(window.document.body.offsetHeight);
       };
     }
