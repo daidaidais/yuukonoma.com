@@ -17,17 +17,19 @@ const Osandojo = () => {
 
     const data = useStaticQuery(graphql`
     {
-      contentfulVideo {
-        contents {
-          explanation {
-            raw
-          }
-          title
-          details
-          link
+      contentfulOdandojo {
+        vision
+        earlybirdDeadline
+        intro {
+          raw
         }
-        explanation {
-          explanation
+        aboutCoaching {
+          raw
+        }
+        linkTrial
+        dates {
+          date
+          content
         }
       }
     }
@@ -668,7 +670,7 @@ const Osandojo = () => {
                 </Col>
             </Row>
 
-            <Row className="section-meditationTrial">
+            {/* <Row className="section-meditationTrial">
                 <Col
                 sm={12}
                 md={12}
@@ -688,7 +690,7 @@ const Osandojo = () => {
                     </a>
                     </Fade>
                 </Col>
-            </Row>
+            </Row> */}
         </Layout>
       );
 }
